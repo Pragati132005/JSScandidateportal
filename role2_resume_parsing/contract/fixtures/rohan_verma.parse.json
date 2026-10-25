@@ -1,0 +1,312 @@
+{
+  "schema_version": "1.0",
+  "source_type": "resume",
+  "source_file": "Rohan_Verma.pdf",
+  "company": null,
+  "role": null,
+  "skills": [
+    {
+      "skill_name": "C++",
+      "category_code": "COD",
+      "evidence": "C++, Python, SQL, Data Structures & Algorithms, System Design",
+      "confidence": "high",
+      "evidence_verified": true,
+      "source_section": "technical_skills"
+    },
+    {
+      "skill_name": "Python",
+      "category_code": "COD",
+      "evidence": "C++, Python, SQL, Data Structures & Algorithms, System Design",
+      "confidence": "high",
+      "evidence_verified": true,
+      "source_section": "technical_skills"
+    },
+    {
+      "skill_name": "SQL",
+      "category_code": "SQL",
+      "evidence": "C++, Python, SQL, Data Structures & Algorithms, System Design",
+      "confidence": "high",
+      "evidence_verified": true,
+      "source_section": "technical_skills"
+    },
+    {
+      "skill_name": "Data Structures & Algorithms",
+      "category_code": "DSA",
+      "evidence": "C++, Python, SQL, Data Structures & Algorithms, System Design",
+      "confidence": "high",
+      "evidence_verified": true,
+      "source_section": "technical_skills"
+    },
+    {
+      "skill_name": "System Design",
+      "category_code": "SYSD",
+      "evidence": "Designed and built a scalable notification service (pub-sub architecture, horizontally-scalable workers)",
+      "confidence": "high",
+      "evidence_verified": true,
+      "source_section": "projects"
+    },
+    {
+      "skill_name": "Object-Oriented Design",
+      "category_code": "OOD",
+      "evidence": "Wrote a technical blog series on object-oriented design patterns used in real-world systems",
+      "confidence": "high",
+      "evidence_verified": true,
+      "source_section": "projects"
+    },
+    {
+      "skill_name": "Operating Systems",
+      "category_code": "OS",
+      "evidence": "Operating Systems, basic Machine Learning, Git, Docker",
+      "confidence": "high",
+      "evidence_verified": true,
+      "source_section": "technical_skills"
+    },
+    {
+      "skill_name": "Machine Learning",
+      "category_code": "AI",
+      "evidence": "Built a recommendation engine using collaborative filtering on a movie-ratings dataset, evaluated with precision/recall",
+      "confidence": "high",
+      "evidence_verified": true,
+      "source_section": "projects"
+    },
+    {
+      "skill_name": "Git",
+      "category_code": "SWE",
+      "evidence": "Operating Systems, basic Machine Learning, Git, Docker",
+      "confidence": "high",
+      "evidence_verified": true,
+      "source_section": "technical_skills"
+    },
+    {
+      "skill_name": "Docker",
+      "category_code": "SWE",
+      "evidence": "Operating Systems, basic Machine Learning, Git, Docker",
+      "confidence": "high",
+      "evidence_verified": true,
+      "source_section": "technical_skills"
+    },
+    {
+      "skill_name": "Competitive Programming",
+      "category_code": "DSA",
+      "evidence": "500+ problems solved across competitive programming platforms",
+      "confidence": "medium",
+      "evidence_verified": true,
+      "source_section": "achievements"
+    },
+    {
+      "skill_name": "Testing and CI",
+      "category_code": "SWE",
+      "evidence": "shipped a feature end-to-end including tests and CI",
+      "confidence": "medium",
+      "evidence_verified": true,
+      "source_section": "internships"
+    },
+    {
+      "skill_name": "Technical Writing",
+      "category_code": "COMM",
+      "evidence": "Wrote a technical blog series on object-oriented design patterns used in real-world systems",
+      "confidence": "low",
+      "evidence_verified": true,
+      "source_section": "projects"
+    }
+  ],
+  "profile_prefill": {
+    "name": "Rohan Verma",
+    "email": null,
+    "education": "B.Tech, Computer Science and Engineering, Class of 2026 — CGPA 9.1 / 10",
+    "skills": [
+      {
+        "skill_name": "C++",
+        "category_code": "COD",
+        "evidence": "C++, Python, SQL, Data Structures & Algorithms, System Design",
+        "confidence": "high",
+        "evidence_verified": true,
+        "source_section": "technical_skills"
+      },
+      {
+        "skill_name": "Python",
+        "category_code": "COD",
+        "evidence": "C++, Python, SQL, Data Structures & Algorithms, System Design",
+        "confidence": "high",
+        "evidence_verified": true,
+        "source_section": "technical_skills"
+      },
+      {
+        "skill_name": "SQL",
+        "category_code": "SQL",
+        "evidence": "C++, Python, SQL, Data Structures & Algorithms, System Design",
+        "confidence": "high",
+        "evidence_verified": true,
+        "source_section": "technical_skills"
+      },
+      {
+        "skill_name": "Data Structures & Algorithms",
+        "category_code": "DSA",
+        "evidence": "C++, Python, SQL, Data Structures & Algorithms, System Design",
+        "confidence": "high",
+        "evidence_verified": true,
+        "source_section": "technical_skills"
+      },
+      {
+        "skill_name": "System Design",
+        "category_code": "SYSD",
+        "evidence": "Designed and built a scalable notification service (pub-sub architecture, horizontally-scalable workers)",
+        "confidence": "high",
+        "evidence_verified": true,
+        "source_section": "projects"
+      },
+      {
+        "skill_name": "Object-Oriented Design",
+        "category_code": "OOD",
+        "evidence": "Wrote a technical blog series on object-oriented design patterns used in real-world systems",
+        "confidence": "high",
+        "evidence_verified": true,
+        "source_section": "projects"
+      },
+      {
+        "skill_name": "Operating Systems",
+        "category_code": "OS",
+        "evidence": "Operating Systems, basic Machine Learning, Git, Docker",
+        "confidence": "high",
+        "evidence_verified": true,
+        "source_section": "technical_skills"
+      },
+      {
+        "skill_name": "Machine Learning",
+        "category_code": "AI",
+        "evidence": "Built a recommendation engine using collaborative filtering on a movie-ratings dataset, evaluated with precision/recall",
+        "confidence": "high",
+        "evidence_verified": true,
+        "source_section": "projects"
+      },
+      {
+        "skill_name": "Git",
+        "category_code": "SWE",
+        "evidence": "Operating Systems, basic Machine Learning, Git, Docker",
+        "confidence": "high",
+        "evidence_verified": true,
+        "source_section": "technical_skills"
+      },
+      {
+        "skill_name": "Docker",
+        "category_code": "SWE",
+        "evidence": "Operating Systems, basic Machine Learning, Git, Docker",
+        "confidence": "high",
+        "evidence_verified": true,
+        "source_section": "technical_skills"
+      },
+      {
+        "skill_name": "Competitive Programming",
+        "category_code": "DSA",
+        "evidence": "500+ problems solved across competitive programming platforms",
+        "confidence": "medium",
+        "evidence_verified": true,
+        "source_section": "achievements"
+      },
+      {
+        "skill_name": "Testing and CI",
+        "category_code": "SWE",
+        "evidence": "shipped a feature end-to-end including tests and CI",
+        "confidence": "medium",
+        "evidence_verified": true,
+        "source_section": "internships"
+      },
+      {
+        "skill_name": "Technical Writing",
+        "category_code": "COMM",
+        "evidence": "Wrote a technical blog series on object-oriented design patterns used in real-world systems",
+        "confidence": "low",
+        "evidence_verified": true,
+        "source_section": "projects"
+      }
+    ],
+    "hackathons": [
+      {
+        "title": "National inter-college hackathon",
+        "result": "Winner",
+        "kind": "hackathon",
+        "description": "built a real-time collaborative document editor"
+      }
+    ],
+    "internships": [
+      {
+        "role": "Software Engineering intern",
+        "organization": "Series-B startup",
+        "description": "shipped a feature end-to-end including tests and CI"
+      }
+    ],
+    "certifications": [],
+    "preferred_roles": [
+      "Software Engineer",
+      "Data Scientist",
+      "Backend Engineer"
+    ],
+    "cv_file": "Rohan_Verma.pdf"
+  },
+  "details": {
+    "phone": null,
+    "links": [],
+    "education_details": [
+      {
+        "degree": "B.Tech",
+        "field": "Computer Science and Engineering",
+        "institution": null,
+        "graduation_year": 2026,
+        "grade": "9.1 / 10",
+        "grade_scale": "CGPA"
+      }
+    ],
+    "projects": [
+      {
+        "title": "Scalable notification service",
+        "description": "pub-sub architecture, horizontally-scalable workers as a personal system-design project, documented with architecture diagrams",
+        "technologies": ["System Design", "pub-sub"]
+      },
+      {
+        "title": "Recommendation engine",
+        "description": "collaborative filtering on a movie-ratings dataset, evaluated with precision/recall",
+        "technologies": ["Machine Learning", "collaborative filtering"]
+      },
+      {
+        "title": "Technical blog series",
+        "description": "object-oriented design patterns used in real-world systems",
+        "technologies": ["Object-Oriented Design"]
+      }
+    ],
+    "experience": [
+      {
+        "role": "Software Engineering intern",
+        "organization": "Series-B startup",
+        "description": "shipped a feature end-to-end including tests and CI"
+      }
+    ],
+    "achievements": [
+      "500+ problems solved across competitive programming platforms",
+      "open-source contributor (2 merged PRs to a mid-size Python library)"
+    ]
+  },
+  "category_summary": null,
+  "meta": {
+    "parser_version": "1.0",
+    "prompt_version": "p1",
+    "taxonomy_version": "v1",
+    "model_used": "manual-fixture",
+    "from_cache": false,
+    "input_format": "pdf",
+    "parse_warnings": [
+      "No email or phone listed in resume"
+    ],
+    "categories_without_evidence": [
+      "CLOUD",
+      "NETW",
+      "APTI"
+    ],
+    "field_confidence": {
+      "name": "high",
+      "email": "none",
+      "education": "high",
+      "skills": "high"
+    },
+    "processing_ms": 0
+  }
+}
