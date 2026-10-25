@@ -1,0 +1,137 @@
+{
+  "full_name": "Ananya Rao",
+  "headline": "Systems-leaning generalist — strong fit for SWE-heavy roles, weaker fit for data roles",
+  "summary": "Systems-oriented Computer Science and Engineering candidate with skills in programming, operating systems, computer networks, and object-oriented design. Built a distributed URL-shortening service, a multithreaded C++ job scheduler, and a Java parking-lot management system. Solved 350+ competitive programming problems and mentors juniors in DSA through the college coding club.",
+  "target_roles": [
+    "Software Engineer",
+    "Backend Engineer"
+  ],
+  "education": [
+    {
+      "institution": "",
+      "degree": "B.Tech",
+      "field_of_study": "Computer Science and Engineering",
+      "start_year": "",
+      "end_year": "2026",
+      "gpa": "8.6 / 10"
+    }
+  ],
+  "skills": [
+    {
+      "name": "C++",
+      "categoryHint": "COD",
+      "evidenceHint": "Listed in technical skills; used to implement a multithreaded job scheduler simulating OS-level process scheduling algorithms.",
+      "confidence": "high"
+    },
+    {
+      "name": "Python",
+      "categoryHint": "COD",
+      "evidenceHint": "Listed in the resume's Technical Skills section.",
+      "confidence": "high"
+    },
+    {
+      "name": "Java",
+      "categoryHint": "COD",
+      "evidenceHint": "Listed in technical skills; used to design a parking-lot management system with Factory and Strategy patterns.",
+      "confidence": "high"
+    },
+    {
+      "name": "Data Structures & Algorithms",
+      "categoryHint": "DSA",
+      "evidenceHint": "Listed as a technical skill; solved 350+ competitive programming problems and mentors juniors in DSA through the college coding club.",
+      "confidence": "high"
+    },
+    {
+      "name": "Operating Systems",
+      "categoryHint": "OS",
+      "evidenceHint": "Listed as a technical skill; implemented a job scheduler simulating Round Robin, Priority, and SJF scheduling.",
+      "confidence": "high"
+    },
+    {
+      "name": "Computer Networks",
+      "categoryHint": "NETW",
+      "evidenceHint": "Listed in the resume's Technical Skills section.",
+      "confidence": "high"
+    },
+    {
+      "name": "Object-Oriented Design",
+      "categoryHint": "OOD",
+      "evidenceHint": "Listed as a technical skill; applied Factory and Strategy design patterns in a Java parking-lot management system.",
+      "confidence": "high"
+    },
+    {
+      "name": "Git",
+      "categoryHint": "OTHER",
+      "evidenceHint": "Listed in the resume's Technical Skills section.",
+      "confidence": "high"
+    },
+    {
+      "name": "Linux",
+      "categoryHint": "OS",
+      "evidenceHint": "Listed in the resume's Technical Skills section.",
+      "confidence": "high"
+    }
+  ],
+  "projects": [
+    {
+      "title": "Distributed URL-Shortening Service",
+      "role": "Capstone systems project",
+      "description": "Built a distributed URL-shortening service with a Redis-backed cache and a horizontally scalable API layer.",
+      "technologies": [
+        "Redis"
+      ],
+      "highlights": [
+        "Implemented a Redis-backed cache",
+        "Designed a horizontally scalable API layer"
+      ]
+    },
+    {
+      "title": "Multithreaded Job Scheduler",
+      "role": "Developer",
+      "description": "Implemented a multithreaded job scheduler in C++ simulating OS-level process scheduling algorithms.",
+      "technologies": [
+        "C++"
+      ],
+      "highlights": [
+        "Round Robin scheduling",
+        "Priority scheduling",
+        "Shortest Job First (SJF) scheduling"
+      ]
+    },
+    {
+      "title": "Parking-Lot Management System",
+      "role": "Developer",
+      "description": "Designed a parking-lot management system in Java using object-oriented design patterns as a design-practice exercise.",
+      "technologies": [
+        "Java"
+      ],
+      "highlights": [
+        "Factory design pattern",
+        "Strategy design pattern"
+      ]
+    }
+  ],
+  "experience": [
+    {
+      "company": "",
+      "title": "Backend Intern",
+      "location": "",
+      "start_date": "",
+      "end_date": "",
+      "is_current": false,
+      "description": "Summer intern on the backend team at a mid-size product startup; shipped a rate-limiter used in production.",
+      "technologies": []
+    },
+    {
+      "company": "",
+      "title": "National-Level Hackathon Finalist",
+      "location": "",
+      "start_date": "",
+      "end_date": "",
+      "is_current": false,
+      "description": "Finalist in a national-level 24-hour hackathon; built a real-time chat backend.",
+      "technologies": []
+    }
+  ],
+  "certifications": []
+}
