@@ -148,7 +148,7 @@ def test_mocked_llm_short_name_cannot_replace_font_name(tmp_path):
     from resume_parser.pipeline import parse_resume
 
     class ShortNameClient:
-        def generate(self, system_prompt, user_prompt, prompt_version, cache_key_override=None):
+        def generate(self, system_prompt, user_prompt, prompt_version, cache_key_override=None, replay_key_override=None):
             raw = {
                 "name": "Morgan",
                 "email": "morgan.reed@example.com",

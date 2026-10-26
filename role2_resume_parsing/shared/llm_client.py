@@ -33,6 +33,10 @@ class LLMResponse:
     warnings: List[str] = field(default_factory=list)
 
 
+class ReplayMissError(RuntimeError):
+    """Raised when replay mode has no recorded answer for the requested input."""
+
+
 def content_to_text(content: Any) -> str:
     """Convert string or provider content blocks into plain text."""
     if isinstance(content, str):
@@ -98,6 +102,7 @@ class LLMClient:
         user_prompt: str,
         prompt_version: str = "p4",
         cache_key_override: Optional[str] = None,
+        replay_key_override: Optional[str] = None,
     ) -> LLMResponse:
         """Execute LLM generation with caching, retry, and failover logic."""
         start_time = time.time()
@@ -113,8 +118,9 @@ class LLMClient:
         cache_key = cache_key_override or compute_cache_key(
             combined_text, prompt_version, primary_model
         )
+        lookup_key = replay_key_override if self.mode == "replay" and replay_key_override else cache_key
 
-        cached_entry = self.cache.get(cache_key)
+        cached_entry = self.cache.get(lookup_key)
         if cached_entry:
             raw_text, meta = cached_entry
             raw_text = content_to_text(raw_text)
@@ -130,8 +136,8 @@ class LLMClient:
 
         # In replay mode, if not found in cache/recorded, raise error or fallback to mock
         if self.mode == "replay":
-            raise RuntimeError(
-                f"Replay mode requested but no cached/recorded response found for key: {cache_key}"
+            raise ReplayMissError(
+                f"Replay mode requested but no cached/recorded response found for key: {lookup_key}"
             )
 
         # 3. Live Mode: Iterate Provider Chain

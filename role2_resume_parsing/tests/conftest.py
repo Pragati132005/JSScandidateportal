@@ -28,6 +28,8 @@ def pytest_collection_modifyitems(items):
         "test_packaging.py::test_cli_no_llm_flag",
         "test_pipeline.py::test_pipeline_end_to_end_replay",
         "test_pipeline.py::test_pipeline_partial_mock_llm_output_keeps_core_fields",
+        "test_replay.py::test_replay_uses_p4_fixture_without_model_ids",
+        "test_replay.py::test_replay_miss_warns_and_uses_rule_based_fallback",
         "test_prefill.py::test_sample_education_strings_remain_byte_identical",
         "test_prefill.py::test_sample_names_remain_byte_identical",
         "test_summary.py::test_pipeline_category_summary_present",

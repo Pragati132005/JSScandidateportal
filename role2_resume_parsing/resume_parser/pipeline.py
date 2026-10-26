@@ -17,7 +17,7 @@ from resume_parser.prefill import build_prefill_and_details
 from resume_parser.segment import segment_resume
 from shared.clean import clean_text
 from shared.ingest import extract_text
-from shared.llm_client import LLMClient
+from shared.llm_client import LLMClient, ReplayMissError
 
 
 def parse_resume(
@@ -82,6 +82,10 @@ def parse_resume(
 
             # Consensus fusion
             merged_raw = fuse_extractions(llm_raw, dict_raw)
+        except ReplayMissError:
+            all_warnings.append("replay: no recorded answer, rule-based fallback used")
+            merged_raw = dict_raw
+            model_used = "rule-based-fallback"
         except Exception as e:
             all_warnings.append(f"LLM extraction failed ({e}); fell back to rule-based dictionary parser.")
             merged_raw = dict_raw

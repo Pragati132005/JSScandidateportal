@@ -10,6 +10,7 @@ from resume_parser.prompts import (
     build_user_prompt,
 )
 from resume_parser.segment import SegmentResult
+from shared.cache import compute_replay_key
 from shared.llm_client import LLMClient, LLMResponse
 
 
@@ -44,6 +45,7 @@ def extract_resume_raw(
         user_prompt=user_prompt,
         prompt_version=PROMPT_VERSION,
         cache_key_override=cache_key_override,
+        replay_key_override=compute_replay_key(cleaned_text, PROMPT_VERSION),
     )
 
     extracted_dict = dict(response.parsed_json or {})

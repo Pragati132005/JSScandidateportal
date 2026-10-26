@@ -2,7 +2,7 @@
 
 import json
 import pytest
-from shared.cache import compute_cache_key, ResponseCache
+from shared.cache import compute_cache_key, compute_replay_key, ResponseCache
 from shared.llm_client import LLMClient, clean_json_markdown, LLMResponse, content_to_text
 
 
@@ -40,6 +40,12 @@ def test_cache_key_changes_when_system_prompt_changes():
     first = compute_cache_key("system one\nuser", "p4", "gemini-2.5-flash")
     second = compute_cache_key("system two\nuser", "p4", "gemini-2.5-flash")
     assert first != second
+
+
+def test_replay_key_ignores_model_id():
+    first = compute_replay_key("cleaned resume", "p4")
+    second = compute_replay_key("cleaned resume", "p4")
+    assert first == second
 
 
 def test_clean_json_markdown():

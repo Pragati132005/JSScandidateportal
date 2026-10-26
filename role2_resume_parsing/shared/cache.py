@@ -17,6 +17,13 @@ def compute_cache_key(full_prompt_text: str, prompt_version: str, model_id: str)
     return hashlib.sha256(content.encode("utf-8")).hexdigest()
 
 
+def compute_replay_key(cleaned_text: str, prompt_version: str) -> str:
+    """Compute the model-independent key used for recorded replay answers."""
+    text_hash = hashlib.sha256(cleaned_text.encode("utf-8")).hexdigest()
+    content = f"{text_hash}|{prompt_version.strip()}"
+    return hashlib.sha256(content.encode("utf-8")).hexdigest()
+
+
 class ResponseCache:
     """Manages disk-based caching across cache/ (gitignored) and recorded/ (tracked)."""
 
@@ -44,6 +51,19 @@ class ResponseCache:
             with open(recorded_path, "r", encoding="utf-8") as f:
                 data = json.load(f)
                 return data.get("response", ""), data.get("meta", {})
+
+        index_path = os.path.join(self.recorded_dir, "index.json")
+        if os.path.exists(index_path):
+            with open(index_path, "r", encoding="utf-8") as f:
+                index = json.load(f)
+            entries = index.get("entries", index) if isinstance(index, dict) else {}
+            recorded_name = entries.get(key) if isinstance(entries, dict) else None
+            if isinstance(recorded_name, str):
+                indexed_path = os.path.join(self.recorded_dir, os.path.basename(recorded_name))
+                if os.path.exists(indexed_path):
+                    with open(indexed_path, "r", encoding="utf-8") as f:
+                        data = json.load(f)
+                    return data.get("response", ""), data.get("meta", {})
 
         return None
 
