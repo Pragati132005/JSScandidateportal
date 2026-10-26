@@ -40,6 +40,7 @@ class SkillTaxonomy:
         # Build lookup tables
         # normalized_alias -> (canonical, category_code, ambiguous, note)
         self.lookup: Dict[str, Tuple[str, str, bool, str]] = {}
+        self.exact_only: Dict[str, Tuple[str, str, bool, str]] = {}
         self.all_candidates: List[str] = []
 
         for item in self.skills:
@@ -47,6 +48,11 @@ class SkillTaxonomy:
             cat_code = item["category_code"]
             ambiguous = item.get("ambiguous", False)
             note = item.get("note", "")
+            exact_only = item.get("free_text_match", True) is False
+
+            if exact_only:
+                self.exact_only[canonical] = (canonical, cat_code, ambiguous, note)
+                continue
 
             # Index canonical
             norm_canon = self._normalize_key(canonical)
@@ -82,6 +88,9 @@ class SkillTaxonomy:
             return ("", "OTHER", False)
 
         raw = skill_name.strip()
+        if raw in self.exact_only:
+            canonical, cat_code, ambiguous, _ = self.exact_only[raw]
+            return (canonical, cat_code, ambiguous)
         norm = self._normalize_key(raw)
 
         # 1. Exact match in lookup

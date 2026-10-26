@@ -18,10 +18,10 @@ EXPECTED_SECTIONS = [
     "education",
     "skills",
     "projects",
-    "hackathons_internships",
+    "hackathons",
     "certifications",
     "achievements",
-    "preferred_roles",
+    "other",
 ]
 
 

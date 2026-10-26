@@ -65,6 +65,8 @@ def build_skill_patterns() -> List[Dict[str, Any]]:
     for item in tax.skills:
         canonical = item["canonical"]
         cat_code = item["category_code"]
+        if item.get("free_text_match", True) is False:
+            continue
         aliases = [canonical] + item.get("aliases", [])
 
         # Build regex with word boundaries
@@ -126,7 +128,7 @@ def parse_resume_dictionary(
                         "category_code": p["category_code"],
                         "evidence": line_clean[:120],
                         "confidence": "high",
-                        "source_section": "technical_skills",
+                        "source_section": "skills",
                         "source_kind": "skills_list",
                     })
 
@@ -226,7 +228,7 @@ def parse_resume_dictionary(
     # 6. Hackathons and Internships
     hackathon_entries = []
     internship_entries = []
-    hack_intern_lines = segment_result.sections.get("hackathons_internships", "").splitlines()
+    hack_intern_lines = segment_result.sections.get("hackathons", "").splitlines()
     for line in hack_intern_lines:
         line_clean = line.strip(" •\t-")
         if not line_clean:
@@ -270,7 +272,7 @@ def parse_resume_dictionary(
     ]
 
     # 9. Preferred roles
-    roles_text = segment_result.sections.get("preferred_roles", "")
+    roles_text = segment_result.sections.get("other", "")
     roles = [r.strip() for r in roles_text.replace("\n", ",").split(",") if r.strip()]
 
     return {

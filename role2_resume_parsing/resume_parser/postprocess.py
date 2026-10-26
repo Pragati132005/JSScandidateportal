@@ -12,6 +12,7 @@ Enforces:
 import re
 from typing import Any, Dict, List, Optional, Set, Tuple
 from rapidfuzz import fuzz
+from resume_parser.segment import canonical_section_name
 from shared.taxonomy import normalise
 
 RADIX_12_CATEGORIES = [
@@ -169,7 +170,7 @@ def postprocess_skills(
         raw_conf = str(item.get("confidence", "low")).lower()
         if raw_conf not in CONFIDENCE_RANK:
             raw_conf = "low"
-        source_sec = item.get("source_section")
+        source_sec = canonical_section_name(item.get("source_section") or "skills")
         source_kind = infer_source_kind(
             source_section=source_sec,
             evidence=raw_evidence,

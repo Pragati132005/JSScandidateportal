@@ -5,9 +5,9 @@ from shared.taxonomy import normalise, SkillTaxonomy
 
 
 def test_taxonomy_version():
-    """Verify taxonomy loads v1.0 and contains 13 categories (12 + OTHER)."""
+    """Verify taxonomy loads v1.1 and contains 13 categories (12 + OTHER)."""
     tax = SkillTaxonomy.get_instance()
-    assert tax.version == "v1.0"
+    assert tax.version == "v1.1"
     assert len(tax.categories) == 13
     assert "COD" in tax.categories
     assert "OTHER" in tax.categories

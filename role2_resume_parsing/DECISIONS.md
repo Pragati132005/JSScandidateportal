@@ -109,17 +109,8 @@ This log records every non-obvious choice, assumption, and design decision made 
 - **Decision:** Emit provider-chain warnings in the form `<provider> failed: <reason>; used <fallback>` whenever failover succeeds.
 - **Verification:** Mock, replay, and no-live tests pass; Role 3 fixtures validate, schema `1.3` is exported, and `eval/eval.py` passes. `gold/` and evaluation thresholds are unchanged.
 
-## 2026-10-26 - D020: Public Shared-Repository Delivery Boundary
-- **Decision:** Deliver the module only under `role2_resume_parsing/` on the `resumeparser` branch. Use the corrected tracked `HEAD` archive rather than the bare `v1.0.2` tag so the current integration documentation and ignore rules are included.
-- **Decision:** Exclude `cache/`, `data/unseen*`, and `data/resumes/`. The repository is public, so the organizer resume pack is supplied separately; fictional organizer fixtures, gold files, recorded responses, and Role 3 contract fixtures remain included for offline tests and integration.
-- **Decision:** Keep `.env.example` placeholder-only and make API port/CORS settings environment-configurable (`PORT=8000`, CORS defaults for Vite and localhost). Add the Role 3 frontend wiring guide without changing prompts, ingest text, cache keys, gold data, or evaluation thresholds.
-- **Decision:** Replace the template phone literal found in `tests/test_ingest.py` with a neutral synthetic value before delivery. No supplied personal identifiers or secret-token patterns remain in the copied files.
-- **Verification:** The filtered tracked archive contains 112 files and passed the pre-copy secret and identifier scans. The public-pack absence behavior is documented; `pytest -q` and replay evaluation are run in the destination after environment setup.
-
-## 2026-10-26 - D021: Integration Documentation Completeness
-- **Decision:** Make `docs/INTEGRATION.md` explicitly document the API error JSON body and the `PORT` and `CORS_ORIGINS` environment variables, while retaining the corrected team-taxonomy wording and schema `1.3` contract details.
-
-## 2026-10-26 - D022: Public Data and Replay Fixture Pruning
-- **Decision:** Keep only the six synthetic files under `data/adversarial`. Remove organizer JDs from `data/jds`; the public README now states where the private organizer resume/JD pack must be placed.
-- **Decision:** Remove the 24 unversioned, p2, and p3 recorded responses from the delivered copy. Keep the eight p4 responses selected by the current prompt and replay tests.
-- **Verification:** The retained p4 replay fixtures and synthetic tests remain available; no live provider calls are used.
+## 2026-10-26 - D020: Taxonomy v1.1 and Canonical Skill Sections
+- **Decision:** Extend the shared taxonomy with general programming-language, tool, database, cloud, and communication coverage. Very short names such as `C`, `C#`, `R`, and `Go` are exact, case-sensitive extractor matches only and are excluded from dictionary free-text scanning.
+- **Decision:** Normalize heading variants and skill provenance to the canonical section set: `skills`, `education`, `projects`, `experience`, `hackathons`, `certifications`, `achievements`, and `other`.
+- **Reason:** The own-resume replay exposed missing categories for `Luau` and `Team Collaboration` and raw `SKILL` provenance. The change is vocabulary- and heading-general, not resume-specific.
+- **Verification:** Cached p4 output was reprocessed without a live provider call. The four sample names, education strings, skill names, categories, counts, `gold/`, and evaluation thresholds remain unchanged; only requested source-section/source-kind metadata is canonicalized. `pytest -q` and replay evaluation pass.

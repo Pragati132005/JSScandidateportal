@@ -1,5 +1,5 @@
 {
-  "taxonomy_version": "v1.0",
+  "taxonomy_version": "v1.1",
   "categories": [
     "COD", "DSA", "OOD", "APTI", "COMM", "AI", "CLOUD", "SQL", "SWE", "SYSD", "NETW", "OS", "OTHER"
   ],
@@ -24,6 +24,136 @@
       "category_code": "COD",
       "ambiguous": false,
       "note": "Programming language"
+    },
+    {
+      "canonical": "C",
+      "aliases": [],
+      "category_code": "COD",
+      "ambiguous": false,
+      "free_text_match": false,
+      "note": "Programming language; exact extractor output only"
+    },
+    {
+      "canonical": "C#",
+      "aliases": [],
+      "category_code": "COD",
+      "ambiguous": false,
+      "free_text_match": false,
+      "note": "Programming language; exact extractor output only"
+    },
+    {
+      "canonical": "Go",
+      "aliases": [],
+      "category_code": "COD",
+      "ambiguous": false,
+      "free_text_match": false,
+      "note": "Programming language; exact extractor output only"
+    },
+    {
+      "canonical": "R",
+      "aliases": [],
+      "category_code": "COD",
+      "ambiguous": false,
+      "free_text_match": false,
+      "note": "Programming language; exact extractor output only"
+    },
+    {
+      "canonical": "Rust",
+      "aliases": [],
+      "category_code": "COD",
+      "ambiguous": false,
+      "note": "Programming language"
+    },
+    {
+      "canonical": "JavaScript",
+      "aliases": [],
+      "category_code": "COD",
+      "ambiguous": false,
+      "note": "Programming language"
+    },
+    {
+      "canonical": "TypeScript",
+      "aliases": [],
+      "category_code": "COD",
+      "ambiguous": false,
+      "note": "Programming language"
+    },
+    {
+      "canonical": "Kotlin",
+      "aliases": [],
+      "category_code": "COD",
+      "ambiguous": false,
+      "note": "Programming language"
+    },
+    {
+      "canonical": "Swift",
+      "aliases": [],
+      "category_code": "COD",
+      "ambiguous": false,
+      "note": "Programming language"
+    },
+    {
+      "canonical": "PHP",
+      "aliases": [],
+      "category_code": "COD",
+      "ambiguous": false,
+      "note": "Programming language"
+    },
+    {
+      "canonical": "Ruby",
+      "aliases": [],
+      "category_code": "COD",
+      "ambiguous": false,
+      "note": "Programming language"
+    },
+    {
+      "canonical": "Lua",
+      "aliases": [],
+      "category_code": "COD",
+      "ambiguous": false,
+      "note": "Programming language"
+    },
+    {
+      "canonical": "Luau",
+      "aliases": [],
+      "category_code": "COD",
+      "ambiguous": false,
+      "note": "Programming language"
+    },
+    {
+      "canonical": "Dart",
+      "aliases": [],
+      "category_code": "COD",
+      "ambiguous": false,
+      "note": "Programming language"
+    },
+    {
+      "canonical": "Scala",
+      "aliases": [],
+      "category_code": "COD",
+      "ambiguous": false,
+      "note": "Programming language"
+    },
+    {
+      "canonical": "Bash/Shell",
+      "aliases": ["bash", "shell scripting", "shell"],
+      "category_code": "COD",
+      "ambiguous": false,
+      "note": "Programming and scripting language"
+    },
+    {
+      "canonical": "HTML",
+      "aliases": [],
+      "category_code": "COD",
+      "ambiguous": true,
+      "note": "Markup technology; default category COD"
+    },
+    {
+      "canonical": "CSS",
+      "aliases": [],
+      "category_code": "COD",
+      "ambiguous": true,
+      "note": "Styling technology; default category COD"
     },
     {
       "canonical": "Data Structures & Algorithms",
@@ -132,10 +262,24 @@
     },
     {
       "canonical": "Presenting",
-      "aliases": ["presentation skills", "presenting to non-technical audience", "presenting results to a non-technical audience", "presenting to stakeholders"],
+      "aliases": ["presentation", "presentation skills", "public speaking", "presenting to non-technical audience", "presenting results to a non-technical audience", "presenting to stakeholders"],
       "category_code": "COMM",
       "ambiguous": false,
       "note": "Presentation skills"
+    },
+    {
+      "canonical": "Team Collaboration",
+      "aliases": ["teamwork", "collaboration", "team collaboration"],
+      "category_code": "COMM",
+      "ambiguous": false,
+      "note": "Soft skill"
+    },
+    {
+      "canonical": "Leadership",
+      "aliases": [],
+      "category_code": "COMM",
+      "ambiguous": true,
+      "note": "Soft skill; default category COMM"
     },
     {
       "canonical": "Technical Writing",
@@ -234,6 +378,20 @@
       "category_code": "SQL",
       "ambiguous": false,
       "note": "RDBMS"
+    },
+    {
+      "canonical": "SQLite",
+      "aliases": [],
+      "category_code": "SQL",
+      "ambiguous": false,
+      "note": "Relational database"
+    },
+    {
+      "canonical": "MongoDB",
+      "aliases": ["mongo"],
+      "category_code": "SQL",
+      "ambiguous": true,
+      "note": "Database; default category SQL"
     },
     {
       "canonical": "Schema Design",
@@ -349,7 +507,7 @@
     },
     {
       "canonical": "Linux",
-      "aliases": ["linux basics", "unix", "bash", "command line"],
+      "aliases": ["linux basics", "unix", "command line"],
       "category_code": "OS",
       "ambiguous": false,
       "note": "Operating system and shell"
@@ -416,6 +574,48 @@
       "category_code": "OTHER",
       "ambiguous": false,
       "note": "In-memory datastore"
+    },
+    {
+      "canonical": "React",
+      "aliases": ["react.js"],
+      "category_code": "OTHER",
+      "ambiguous": false,
+      "note": "UI library"
+    },
+    {
+      "canonical": "Node.js",
+      "aliases": ["node", "nodejs"],
+      "category_code": "OTHER",
+      "ambiguous": true,
+      "note": "Runtime/tool; default category OTHER"
+    },
+    {
+      "canonical": "Django",
+      "aliases": [],
+      "category_code": "OTHER",
+      "ambiguous": false,
+      "note": "Web framework"
+    },
+    {
+      "canonical": "Flask",
+      "aliases": [],
+      "category_code": "OTHER",
+      "ambiguous": false,
+      "note": "Web framework"
+    },
+    {
+      "canonical": "Unity",
+      "aliases": [],
+      "category_code": "OTHER",
+      "ambiguous": false,
+      "note": "Game engine"
+    },
+    {
+      "canonical": "Photoshop",
+      "aliases": ["adobe photoshop"],
+      "category_code": "OTHER",
+      "ambiguous": false,
+      "note": "Design tool"
     },
     {
       "canonical": "Ticketing Tools",

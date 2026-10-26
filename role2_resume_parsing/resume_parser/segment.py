@@ -18,6 +18,7 @@ class SegmentResult:
     sections: Dict[str, str] = field(default_factory=dict)
     non_evidence_lines: List[str] = field(default_factory=list)
     warnings: List[str] = field(default_factory=list)
+    unrecognized_headings: List[str] = field(default_factory=list)
 
 
 # Canonical section definitions and common synonyms
@@ -30,9 +31,16 @@ SECTION_SYNONYMS: Dict[str, List[str]] = {
         "education & qualifications",
         "academics & degrees",
         "degrees",
+        "university",
+        "college",
+        "institute",
+        "school",
     ],
     "skills": [
+        "skill",
         "technical skills",
+        "technical skill",
+        "key skills",
         "skills",
         "tech stack",
         "technical proficiencies",
@@ -45,25 +53,33 @@ SECTION_SYNONYMS: Dict[str, List[str]] = {
         "qualifications & skills",
     ],
     "projects": [
+        "project",
         "projects",
         "key projects",
         "academic projects",
         "personal projects",
         "technical projects",
         "experience & projects",
+        "projects & internships",
+        "projects and internships",
+        "projects/internships",
     ],
-    "hackathons_internships": [
+    "hackathons": [
         "hackathons / internships",
         "hackathons and internships",
         "hackathons & internships",
+        "hackathons internships",
         "hackathons",
+        "hackathon",
         "internships",
+        "internship",
         "competitions",
         "honors & competitions",
     ],
     "experience": [
         "experience",
         "work experience",
+        "work",
         "employment history",
         "professional experience",
         "industry experience",
@@ -71,20 +87,27 @@ SECTION_SYNONYMS: Dict[str, List[str]] = {
         "work history & industry experience",
     ],
     "certifications": [
+        "certification",
         "certifications",
+        "certificate",
         "courses",
         "certificates",
         "licenses & certifications",
         "online courses",
     ],
     "achievements": [
+        "achievement",
         "achievements",
         "awards",
         "honors",
         "key achievements",
         "accomplishments",
     ],
-    "preferred_roles": [
+    "other": [
+        "professional summary",
+        "professional profile",
+        "summary",
+        "profile",
         "preferred roles",
         "target roles",
         "target positions",
@@ -92,6 +115,17 @@ SECTION_SYNONYMS: Dict[str, List[str]] = {
         "objective",
         "desired roles",
     ],
+}
+
+CANONICAL_SECTIONS = {
+    "skills",
+    "education",
+    "projects",
+    "experience",
+    "hackathons",
+    "certifications",
+    "achievements",
+    "other",
 }
 
 FIT_LABEL_INDICATORS = [
@@ -160,6 +194,29 @@ def match_heading(line: str, threshold: float = 85.0) -> Optional[str]:
     return None
 
 
+def canonical_section_name(value: Optional[str]) -> str:
+    """Map a section label or source-section value to the shared canonical set."""
+    if not isinstance(value, str) or not value.strip():
+        return "other"
+    cleaned = value.strip().lower().replace("_", " ")
+    cleaned = re.sub(r"\s+", " ", cleaned)
+    if cleaned in CANONICAL_SECTIONS:
+        return cleaned
+    matched = match_heading(cleaned)
+    return matched if matched in CANONICAL_SECTIONS else "other"
+
+
+def _looks_like_unrecognized_heading(line: str) -> bool:
+    """Identify likely all-caps headings without treating short skills as headings."""
+    tokens = line.split()
+    return (
+        2 <= len(tokens) <= 5
+        and line == line.upper()
+        and not any(character.isdigit() for character in line)
+        and not re.search(r"[@:/]", line)
+    )
+
+
 def segment_resume(cleaned_text: str) -> SegmentResult:
     """Segment cleaned resume text into standard sections and identify non-evidence.
 
@@ -177,6 +234,7 @@ def segment_resume(cleaned_text: str) -> SegmentResult:
     headline_fit_label = None
     non_evidence: List[str] = []
     warnings: List[str] = []
+    unrecognized_headings: List[str] = []
 
     # The name may be split across a few short header lines.
     name_lines = []
@@ -232,10 +290,15 @@ def segment_resume(cleaned_text: str) -> SegmentResult:
             if is_fit_label(line):
                 headline_fit_label = line
                 non_evidence.append(line)
+            elif _looks_like_unrecognized_heading(line):
+                unrecognized_headings.append(line)
+                sections[current_section].append(line)
             else:
                 sections[current_section].append(line)
         else:
             # Uncategorized line before any heading
+            if _looks_like_unrecognized_heading(line):
+                unrecognized_headings.append(line)
             non_evidence.append(line)
 
         line_idx += 1
@@ -249,6 +312,7 @@ def segment_resume(cleaned_text: str) -> SegmentResult:
             sections={"unsegmented": cleaned_text},
             non_evidence_lines=non_evidence,
             warnings=warnings,
+            unrecognized_headings=unrecognized_headings,
         )
 
     # Convert list of lines into joined text per section
@@ -264,4 +328,5 @@ def segment_resume(cleaned_text: str) -> SegmentResult:
         sections=final_sections,
         non_evidence_lines=non_evidence,
         warnings=warnings,
+        unrecognized_headings=unrecognized_headings,
     )

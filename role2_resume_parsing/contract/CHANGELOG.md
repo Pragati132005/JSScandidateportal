@@ -1,5 +1,10 @@
 # Contract Changelog & Open Questions for Team
 
+## Version 1.4 (2026-10-26) - Taxonomy v1.1 and canonical sections
+- Extended the team taxonomy with common programming languages, tools, databases, cloud services, and communication skills.
+- Marked ambiguous entries explicitly and restricted very short language names to exact, case-sensitive extractor matches.
+- Normalized section labels and skill provenance to the canonical section set: `skills`, `education`, `projects`, `experience`, `hackathons`, `certifications`, `achievements`, and `other`.
+
 ## Version 1.3 (2026-10-26) - Null-safe details and stable upload errors
 - Made optional nested detail fields tolerant of missing resume data.
 - Added item-level validation warnings and project-title derivation from descriptions.
