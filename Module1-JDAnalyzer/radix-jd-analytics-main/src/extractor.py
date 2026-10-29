@@ -147,11 +147,11 @@ class JDExtractor:
             print("[Info] Running in Heuristic Extraction mode (no active LLM API key detected).")
             extracted_data = self._heuristic_extract(jd_text, source_file, company, role)
 
-        # Overwrite company or role if explicitly provided by caller
-        if company:
-            extracted_data["company"] = company
-        if role:
-            extracted_data["role"] = role
+        # Overwrite company or role if explicitly provided by caller with non-empty text
+        if company and company.strip():
+            extracted_data["company"] = company.strip()
+        if role and role.strip():
+            extracted_data["role"] = role.strip()
         if source_file:
             extracted_data["source_file"] = source_file
 
@@ -291,28 +291,38 @@ class JDExtractor:
         High-precision rule-based extractor to guarantee 100% functionality
         offline or during development prior to plugging in LLM API keys.
         """
-        # Guess company & role if not provided
-        detected_company = company or "Company"
-        detected_role = role or "Software Engineer"
+        clean_company = company.strip() if (company and company.strip()) else None
+        clean_role = role.strip() if (role and role.strip()) else None
 
-        lower_text = jd_text.lower()
-        if "google" in lower_text:
-            detected_company = "Google LLC"
-        elif "microsoft" in lower_text:
-            detected_company = "Microsoft Corporation"
-        elif "oracle" in lower_text:
-            detected_company = "Oracle Financial Services Software"
+        detected_company = clean_company or "Company"
+        detected_role = clean_role or "Software Engineer"
 
-        if "data scientist" in lower_text:
-            detected_role = "Data Scientist"
-        elif "data analyst" in lower_text:
-            detected_role = "Data Analyst"
-        elif "application support" in lower_text:
-            detected_role = "Application Support Analyst"
-        elif "associate software engineer" in lower_text:
-            detected_role = "Associate Software Engineer"
-        elif "software engineer" in lower_text or "swe" in lower_text:
-            detected_role = "Software Engineer (SWE)"
+        lower_text = f"{jd_text} {source_file or ''}".lower()
+        if not clean_company:
+            if "google" in lower_text:
+                detected_company = "Google LLC"
+            elif "microsoft" in lower_text:
+                detected_company = "Microsoft Corporation"
+            elif "oracle" in lower_text:
+                detected_company = "Oracle Financial Services Software"
+            elif "accenture" in lower_text:
+                detected_company = "Accenture plc"
+            elif "amazon" in lower_text:
+                detected_company = "Amazon"
+
+        if not clean_role:
+            if "data scientist" in lower_text:
+                detected_role = "Data Scientist"
+            elif "data analyst" in lower_text:
+                detected_role = "Data Analyst"
+            elif "application support" in lower_text:
+                detected_role = "Application Support Analyst"
+            elif "associate software engineer" in lower_text:
+                detected_role = "Associate Software Engineer"
+            elif "devops" in lower_text or "cloud engineer" in lower_text:
+                detected_role = "Senior DevOps Architect"
+            elif "software engineer" in lower_text or "swe" in lower_text:
+                detected_role = "Software Engineer (SWE)"
 
         # Dictionary of skill indicators mapped to RADIX categories
         skill_catalog = [

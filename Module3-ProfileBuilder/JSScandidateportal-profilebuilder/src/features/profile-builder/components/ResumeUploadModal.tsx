@@ -9,6 +9,7 @@ import {
   Info,
   ShieldAlert,
   FileJson,
+  Loader2,
 } from 'lucide-react';
 import type { CandidateProfile, Module2Metadata } from '../types';
 import {
@@ -23,6 +24,7 @@ import {
   extractModule2Metadata,
   type ParsedResumeInput,
 } from '../services/resumeAdapter';
+import { parseResumeFile } from '../services/resumeParserService';
 
 interface ResumeUploadModalProps {
   isOpen: boolean;
@@ -68,6 +70,7 @@ export const ResumeUploadModal: React.FC<ResumeUploadModalProps> = ({
   };
 
   const handleClose = () => {
+    if (isParsing) return;
     resetState();
     onClose();
   };
@@ -87,11 +90,23 @@ export const ResumeUploadModal: React.FC<ResumeUploadModalProps> = ({
     // ZERO FABRICATION POLICY:
     // Pure mapping directly from parsed input without copying old profile data
     const prefilled = mapParsedResumeToCandidateProfile(parsed, currentProfile);
+    if (filename) {
+      prefilled.cv_file = filename;
+    }
+    if (metadata?.hackathons && metadata.hackathons.length > 0) {
+      prefilled.hackathons = metadata.hackathons.map((h) => ({
+        title: h.title || undefined,
+        result: h.result || undefined,
+        kind: h.kind || undefined,
+        description: h.description || undefined,
+      }));
+    }
     setMappedProfile(prefilled);
   };
 
  
  const processFile = async (file: File) => {
+  if (isParsing) return;
   resetState();
 
   const lowerName = file.name.toLowerCase();
@@ -173,49 +188,11 @@ export const ResumeUploadModal: React.FC<ResumeUploadModalProps> = ({
     return;
   }
 
-  // Send PDF/DOCX files to the real Module 2 parser API.
-  const baseUrl = (
-    import.meta.env.VITE_RESUME_PARSER_API_URL ||
-    'http://127.0.0.1:8000'
-  ).replace(/\/+$/, '');
-
-  const controller = new AbortController();
-  const timeoutId = setTimeout(() => controller.abort(), 120000);
-
+  // Send PDF/DOCX files to the centralized Module 2 parser service.
   setIsParsing(true);
 
   try {
-    const formData = new FormData();
-    formData.append('file', file);
-
-    const response = await fetch(`${baseUrl}/parse-resume`, {
-      method: 'POST',
-      body: formData,
-      signal: controller.signal,
-    });
-
-    const responseText = await response.text();
-
-    let rawOutput: unknown;
-
-    try {
-      rawOutput = JSON.parse(responseText);
-    } catch {
-      throw new Error(
-        `Parser returned an invalid response (HTTP ${response.status}).`
-      );
-    }
-
-    if (!response.ok) {
-      const detail =
-        typeof rawOutput === 'object' &&
-        rawOutput !== null &&
-        'detail' in rawOutput
-          ? String(rawOutput.detail)
-          : response.statusText;
-
-      throw new Error(`Module 2 API error (${response.status}): ${detail}`);
-    }
+    const rawOutput = await parseResumeFile(file);
 
     if (!isModule2ParserOutput(rawOutput)) {
       throw new Error(
@@ -238,21 +215,14 @@ export const ResumeUploadModal: React.FC<ResumeUploadModalProps> = ({
   } catch (err: unknown) {
     const message =
       err instanceof Error ? err.message : 'Unknown parsing error';
-
-    if (err instanceof Error && err.name === 'AbortError') {
-      setValidationError(
-        'Resume parsing timed out. Check that the Module 2 server is running and try again.'
-      );
-    } else {
-      setValidationError(
-        `Resume parsing failed: ${message}. Check that Module 2 is running at ${baseUrl}.`
-      );
-    }
+    setValidationError(
+      `Resume parsing failed: ${message}. Check that Module 2 is running on port 8000.`
+    );
   } finally {
-    clearTimeout(timeoutId);
     setIsParsing(false);
   }
  };
+
 
 
   const handleSelectFixture = (
@@ -260,19 +230,21 @@ export const ResumeUploadModal: React.FC<ResumeUploadModalProps> = ({
     fixtureName: string,
     metadata?: Module2Metadata | null
   ) => {
+    if (isParsing) return;
     resetState();
     applyParsedInput(fixture, fixtureName, 4096, metadata);
   };
 
   const handleFileInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
-    if (file) {
+    if (file && !isParsing) {
       processFile(file);
     }
   };
 
   const handleDragOver = (e: React.DragEvent<HTMLDivElement>) => {
     e.preventDefault();
+    if (isParsing) return;
     setIsDragging(true);
   };
 
@@ -283,6 +255,7 @@ export const ResumeUploadModal: React.FC<ResumeUploadModalProps> = ({
   const handleDrop = (e: React.DragEvent<HTMLDivElement>) => {
     e.preventDefault();
     setIsDragging(false);
+    if (isParsing) return;
     const file = e.dataTransfer.files?.[0];
     if (file) {
       processFile(file);
@@ -345,6 +318,7 @@ export const ResumeUploadModal: React.FC<ResumeUploadModalProps> = ({
             type="button"
             className="icon-action-btn"
             onClick={handleClose}
+            disabled={isParsing}
             aria-label="Close modal"
           >
             <X size={16} />
@@ -386,6 +360,7 @@ export const ResumeUploadModal: React.FC<ResumeUploadModalProps> = ({
                 type="button"
                 className="btn btn-secondary btn-sm"
                 onClick={() => handleSelectFixture(ANANYA_RAO_PARSED_RESUME, 'Ananya_Rao_Resume.json')}
+                disabled={isParsing}
                 style={{ fontSize: '0.8rem', padding: '0.4rem 0.75rem', borderColor: '#38bdf8' }}
               >
                 <Sparkles size={13} color="#38bdf8" /> Load Ananya Rao (SWE / Systems / DSA)
@@ -400,6 +375,7 @@ export const ResumeUploadModal: React.FC<ResumeUploadModalProps> = ({
                     extractModule2Metadata(PRIYA_MENON_PARSED_OUTPUT)
                   )
                 }
+                disabled={isParsing}
                 style={{ fontSize: '0.8rem', padding: '0.4rem 0.75rem', borderColor: '#10b981' }}
               >
                 <Sparkles size={13} color="#10b981" /> Load Priya Menon (Module 2 Parser)
@@ -408,6 +384,7 @@ export const ResumeUploadModal: React.FC<ResumeUploadModalProps> = ({
                 type="button"
                 className="btn btn-secondary btn-sm"
                 onClick={() => handleSelectFixture(SYNTHETIC_PARSED_RESUME, 'Jordan_Taylor_Resume.json')}
+                disabled={isParsing}
                 style={{ fontSize: '0.8rem', padding: '0.4rem 0.75rem' }}
               >
                 <FileJson size={13} /> Load Jordan Taylor (Cloud / DevOps)
@@ -419,29 +396,50 @@ export const ResumeUploadModal: React.FC<ResumeUploadModalProps> = ({
         {/* Upload Zone */}
         {!mappedProfile && (
           <div
-            className={`file-drop-zone ${isDragging ? 'is-dragging' : ''}`}
+            className={`file-drop-zone ${isDragging ? 'is-dragging' : ''} ${isParsing ? 'is-parsing' : ''}`}
             onDragOver={handleDragOver}
             onDragLeave={handleDragLeave}
             onDrop={handleDrop}
-            onClick={() => fileInputRef.current?.click()}
-            style={{ margin: '0.85rem 1.5rem 1.25rem' }}
+            onClick={() => !isParsing && fileInputRef.current?.click()}
+            style={{
+              margin: '0.85rem 1.5rem 1.25rem',
+              cursor: isParsing ? 'not-allowed' : 'pointer',
+              opacity: isParsing ? 0.75 : 1,
+            }}
           >
             <input
               type="file"
               ref={fileInputRef}
               accept=".pdf,.docx,.json,application/pdf,application/json,application/vnd.openxmlformats-officedocument.wordprocessingml.document"
               style={{ display: 'none' }}
+              disabled={isParsing}
               onChange={handleFileInputChange}
             />
-            <div className="drop-zone-icon">
-              <UploadCloud size={30} />
-            </div>
-            <div className="drop-zone-text">
-              <strong>Click to upload</strong> or drag and drop resume file
-            </div>
-            <div className="drop-zone-hint">
-              Supports PDF (.pdf), Word (.docx), or parsed resume JSON (.json) • Max 5 MB
-            </div>
+            {isParsing ? (
+              <>
+                <div className="drop-zone-icon">
+                  <Loader2 size={30} color="#38bdf8" style={{ animation: 'pulse 1.5s ease-in-out infinite' }} />
+                </div>
+                <div className="drop-zone-text">
+                  <strong>Parsing resume with Module 2 AI...</strong>
+                </div>
+                <div className="drop-zone-hint">
+                  Extracting candidate credentials and skills. Please wait...
+                </div>
+              </>
+            ) : (
+              <>
+                <div className="drop-zone-icon">
+                  <UploadCloud size={30} />
+                </div>
+                <div className="drop-zone-text">
+                  <strong>Click to upload</strong> or drag and drop resume file
+                </div>
+                <div className="drop-zone-hint">
+                  Supports PDF (.pdf), Word (.docx), or parsed resume JSON (.json) • Max 5 MB
+                </div>
+              </>
+            )}
           </div>
         )}
 
@@ -643,7 +641,12 @@ export const ResumeUploadModal: React.FC<ResumeUploadModalProps> = ({
 
         {/* Footer Actions */}
         <div className="import-modal-footer">
-          <button type="button" className="btn btn-secondary btn-sm" onClick={handleClose}>
+          <button
+            type="button"
+            className="btn btn-secondary btn-sm"
+            onClick={handleClose}
+            disabled={isParsing}
+          >
             Cancel
           </button>
           {mappedProfile && hasExistingData && (

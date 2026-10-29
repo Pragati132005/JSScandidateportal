@@ -28,7 +28,7 @@ KNOWN_ALIASES: Dict[str, str] = {
     "python 3": "python",
     "py3": "python",
 
-    # Languages
+    # Languages & Programming
     "c": "c",
     "cpp": "c++",
     "c++": "c++",
@@ -37,6 +37,13 @@ KNOWN_ALIASES: Dict[str, str] = {
     "csharp": "c#",
     "golang": "golang",
     "go": "golang",
+    "coding": "coding & programming",
+    "programming": "coding & programming",
+    "coding & programming": "coding & programming",
+    "coding and programming": "coding & programming",
+    "coding / programming": "coding & programming",
+    "programming languages": "coding & programming",
+    "programming language": "coding & programming",
 
     # Web & Frontend
     "html": "html",
@@ -52,6 +59,15 @@ KNOWN_ALIASES: Dict[str, str] = {
     "psql": "postgresql",
     "mysql": "mysql",
     "sql": "sql",
+    "sql & relational databases": "sql",
+    "sql and relational databases": "sql",
+    "sql / relational databases": "sql",
+    "sql & databases": "sql",
+    "sql and databases": "sql",
+    "relational databases": "sql",
+    "relational database": "sql",
+    "relational database management": "sql",
+    "rdbms": "sql",
     "mongodb": "mongodb",
     "mongo": "mongodb",
 
@@ -67,6 +83,12 @@ KNOWN_ALIASES: Dict[str, str] = {
     "linux": "linux",
     "linux basics": "linux",
     "linux os": "linux",
+    "linux fundamentals": "linux",
+    "linux / operating systems": "linux",
+    "linux/operating systems": "linux",
+    "linux & operating systems": "linux",
+    "linux and operating systems": "linux",
+    "operating systems / linux": "linux",
     "unix": "unix",
     "bash": "shell scripting",
     "shell": "shell scripting",
@@ -78,6 +100,35 @@ KNOWN_ALIASES: Dict[str, str] = {
     "computer networks": "computer networks",
     "computer networking": "computer networks",
     "network fundamentals": "computer networks",
+    "networking & protocols": "computer networks",
+    "networking and protocols": "computer networks",
+    "network protocols": "computer networks",
+    "networking protocols": "computer networks",
+    "tcp/ip": "computer networks",
+    "tcp/udp": "computer networks",
+
+    # Object-Oriented Design
+    "object-oriented design": "object-oriented design",
+    "object oriented design": "object-oriented design",
+    "object-oriented design & solid": "object-oriented design",
+    "object oriented design & solid": "object-oriented design",
+    "object-oriented design & patterns": "object-oriented design",
+    "ood": "object-oriented design",
+    "oop": "object-oriented design",
+
+    # Operating Systems & Systems
+    "operating systems": "operating systems",
+    "operating system": "operating systems",
+    "os": "operating systems",
+    "operating systems fundamentals": "operating systems",
+    "os fundamentals": "operating systems",
+
+    # Data Structures & Algorithms
+    "data structures & algorithms": "data structures & algorithms",
+    "data structures and algorithms": "data structures & algorithms",
+    "dsa": "data structures & algorithms",
+    "data structures": "data structures & algorithms",
+    "algorithms": "data structures & algorithms",
 
     # Cloud & DevOps
     "k8s": "kubernetes",
@@ -91,6 +142,9 @@ KNOWN_ALIASES: Dict[str, str] = {
     "ci/cd": "ci/cd",
     "cicd": "ci/cd",
     "ci cd": "ci/cd",
+    "ci/cd & devops": "ci/cd",
+    "ci/cd and devops": "ci/cd",
+    "devops": "ci/cd",
 
     # Office & Tools
     "excel": "excel",
@@ -99,17 +153,43 @@ KNOWN_ALIASES: Dict[str, str] = {
     "ticketing tools": "ticketing tools",
     "ticketing systems": "ticketing tools",
     "ticketing": "ticketing tools",
+    "exposure to ticketing tools": "ticketing tools",
+    "ticketing & incident management systems": "ticketing tools",
+    "ticketing and incident management systems": "ticketing tools",
+    "incident management": "ticketing tools",
 
     # Professional & General Skills
     "software engineering": "software engineering",
     "software development": "software engineering",
     "swe": "software engineering",
+    "software engineering practices": "software engineering",
+    "software engineering fundamentals": "software engineering",
+    "swe practices": "software engineering",
+    "testing & code quality": "software engineering",
+    "testing and code quality": "software engineering",
+    "code quality": "software engineering",
+    "testing": "software engineering",
+    "unit testing": "software engineering",
     "problem solving": "aptitude and problem solving",
     "problem-solving": "aptitude and problem solving",
     "aptitude": "aptitude and problem solving",
     "aptitude and problem solving": "aptitude and problem solving",
     "communication": "communication",
     "communication skills": "communication",
+    "technical communication": "communication",
+    "communication & collaboration": "communication",
+    "communication and collaboration": "communication",
+    "cross-functional collaboration": "communication",
+    "cross functional collaboration": "communication",
+    "collaboration": "communication",
+
+    # System Design & Distributed Systems
+    "system design": "system design",
+    "system design & scalability": "system design",
+    "system design and scalability": "system design",
+    "distributed systems": "distributed systems",
+    "distributed system": "distributed systems",
+    "distributed systems architecture": "distributed systems",
 
     # Machine Learning / AI
     "ml": "machine learning",

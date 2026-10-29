@@ -126,7 +126,10 @@ export const exportProfileToJsonFile = (
         credential_id: c.credential_id || '',
         credential_url: c.credential_url || '',
       })),
+      ...(profile.hackathons && profile.hackathons.length > 0 ? { hackathons: profile.hackathons } : {}),
+      ...(profile.cv_file ? { cv_file: profile.cv_file } : {}),
     };
+
 
     const jsonText = JSON.stringify(exportData, null, 2);
     const blob = new Blob([jsonText], { type: 'application/json;charset=utf-8' });
@@ -273,6 +276,12 @@ export const validateImportedCandidateJson = (rawText: string): ImportValidation
   }
   if (obj.certifications !== undefined && !Array.isArray(obj.certifications)) {
     errors.push('"certifications" must be an array.');
+  }
+  if (obj.hackathons !== undefined && !Array.isArray(obj.hackathons)) {
+    errors.push('"hackathons" must be an array.');
+  }
+  if (obj.cv_file !== undefined && typeof obj.cv_file !== 'string') {
+    errors.push('"cv_file" must be a string.');
   }
 
   if (errors.length > 0) {

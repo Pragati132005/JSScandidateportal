@@ -39,6 +39,7 @@ class TextExtractRequest(BaseModel):
 
 
 @app.get("/")
+@app.get("/health")
 def health_check():
     return {
         "status": "healthy",
@@ -66,10 +67,13 @@ async def extract_from_file_upload(
         with open(temp_path, "wb") as f:
             f.write(content)
 
+        clean_company = company.strip() if (company and company.strip()) else None
+        clean_role = role.strip() if (role and role.strip()) else None
+
         output = extractor.extract_from_file(
             file_path=temp_path,
-            company=company,
-            role=role
+            company=clean_company,
+            role=clean_role
         )
         # Ensure source_file reflects original upload filename
         output.source_file = file.filename

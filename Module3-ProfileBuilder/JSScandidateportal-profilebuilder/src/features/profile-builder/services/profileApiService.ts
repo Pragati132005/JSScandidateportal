@@ -1,30 +1,51 @@
+/**
+ * RADIX Talent Match - Profile Backend Service
+ * Microservice Port: 8040 | Proxy prefix: /api/profiles
+ */
 
-const API_BASE_URL =
-  import.meta.env.VITE_PROFILE_API_URL || 'http://127.0.0.1:8040';
+import { apiFetch } from './apiClient';
+import type { CandidateProfile } from '../types';
+
+export interface ProfileBackendRecord {
+  candidate_id: string;
+  candidate_name: string;
+  email?: string | null;
+  profile_data: CandidateProfile;
+  created_at?: string;
+  updated_at?: string;
+}
 
 export interface ProfileSaveResponse {
   message: string;
   candidate_id: string;
 }
 
-export async function saveProfileToBackend(
-  profile: Record<string, unknown>
-): Promise<ProfileSaveResponse> {
-  const personalInfo = profile.personal_info as
-    | Record<string, unknown>
-    | undefined;
+export interface ProfileBackendHealth {
+  status: string;
+  database?: string;
+  timestamp?: string;
+}
 
-  const candidateId = String(profile.profile_id ?? '').trim();
+const PROFILES_BASE = import.meta.env.VITE_PROFILE_API_URL || '/api/profiles';
+
+/**
+ * Persists a candidate profile to the Profile Backend PostgreSQL database.
+ */
+export async function saveProfileToBackend(
+  profile: CandidateProfile | Record<string, unknown>
+): Promise<ProfileSaveResponse> {
+  const profileRecord = profile as Record<string, unknown>;
+  const personalInfo = profileRecord.personal_info as Record<string, unknown> | undefined;
+
+  const candidateId = String(profileRecord.profile_id ?? '').trim();
   const candidateName = String(personalInfo?.full_name ?? '').trim();
   const email = String(personalInfo?.email ?? '').trim();
 
   if (!candidateId || !candidateName) {
-    throw new Error(
-      'A profile ID and candidate name are required before saving.'
-    );
+    throw new Error('A profile ID and candidate name are required before saving to the backend.');
   }
 
-  const response = await fetch(`${API_BASE_URL}/api/profiles`, {
+  return apiFetch<ProfileSaveResponse>(PROFILES_BASE, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -35,14 +56,31 @@ export async function saveProfileToBackend(
       email: email || null,
       profile_data: profile,
     }),
+    timeoutMs: 15000,
   });
+}
 
-  if (!response.ok) {
-    const errorBody = await response.text();
-    throw new Error(
-      `Backend save failed (${response.status}): ${errorBody}`
-    );
+/**
+ * Retrieves a candidate profile by ID from the Profile Backend.
+ */
+export async function getProfileFromBackend(candidateId: string): Promise<ProfileBackendRecord> {
+  if (!candidateId.trim()) {
+    throw new Error('Candidate ID is required.');
   }
 
-  return response.json() as Promise<ProfileSaveResponse>;
+  const endpoint = `${PROFILES_BASE}/${encodeURIComponent(candidateId.trim())}`;
+  return apiFetch<ProfileBackendRecord>(endpoint, {
+    method: 'GET',
+    timeoutMs: 10000,
+  });
+}
+
+/**
+ * Health check for Profile Backend.
+ */
+export async function checkProfileBackendHealth(): Promise<ProfileBackendHealth> {
+  return apiFetch<ProfileBackendHealth>('/api/backend-health', {
+    method: 'GET',
+    timeoutMs: 5000,
+  });
 }

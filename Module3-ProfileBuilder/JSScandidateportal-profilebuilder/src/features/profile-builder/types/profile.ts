@@ -110,6 +110,13 @@ export interface CandidateCertification {
   credential_url?: string;
 }
 
+export interface CandidateHackathon {
+  title?: string;
+  result?: string;
+  kind?: string;
+  description?: string;
+}
+
 export interface CandidateProfile {
   schema_version: '1.0.0';
   profile_id: string;
@@ -121,4 +128,7 @@ export interface CandidateProfile {
   projects: CandidateProject[];
   internships_and_experience: CandidateExperience[];
   certifications: CandidateCertification[];
+  hackathons?: CandidateHackathon[];
+  cv_file?: string;
 }
+

@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
-    "test": "node test-stage3.mjs && node test-stage4.mjs && node test-stage5.mjs && node test-ananya-prefill.mjs && node test-verify-payload.mjs && node test-module2-priya.mjs",
+    "test": "node test-stage3.mjs && node test-stage4.mjs && node test-stage5.mjs && node test-ananya-prefill.mjs && node test-verify-payload.mjs && node test-module2-priya.mjs && node test-stage6-unified.mjs",
     "lint": "oxlint",
     "preview": "vite preview"
   },
