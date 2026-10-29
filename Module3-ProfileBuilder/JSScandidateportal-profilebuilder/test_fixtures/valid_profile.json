@@ -1,0 +1,83 @@
+{
+  "schema_version": "1.0.0",
+  "profile_id": "test-imported-candidate-101",
+  "last_updated": "2026-10-24T20:00:00.000Z",
+  "personal_info": {
+    "full_name": "Marcus Aurelius Vance",
+    "headline": "Senior Distributed Systems Engineer & Architect",
+    "email": "marcus.vance@example.org",
+    "phone": "+1 (555) 987-6543",
+    "location": "Seattle, WA, USA",
+    "bio": "Specialized in high-throughput data processing and Raft consensus implementations.",
+    "links": {
+      "linkedin": "https://linkedin.com/in/marcus-vance",
+      "github": "https://github.com/marcus-vance",
+      "portfolio": "https://marcusvance.tech"
+    }
+  },
+  "preferred_roles": [
+    {
+      "id": "role-1",
+      "title": "Principal Backend Architect",
+      "department": "Infrastructure",
+      "is_primary": true
+    }
+  ],
+  "education": [
+    {
+      "id": "edu-1",
+      "institution": "University of Washington",
+      "degree": "M.S. in Computer Science & Engineering",
+      "field_of_study": "Distributed Systems",
+      "start_year": "2017",
+      "end_year": "2019",
+      "grade_or_gpa": "3.95 / 4.0"
+    }
+  ],
+  "skills": [
+    {
+      "id": "skill-1",
+      "name": "Rust Systems Programming",
+      "category": "COD",
+      "confidence": "high",
+      "evidence": "Built custom Raft consensus engine running in production across 40 nodes",
+      "years_of_experience": 5
+    },
+    {
+      "id": "skill-2",
+      "name": "Distributed Consensus & Fault Tolerance",
+      "category": "SYSD",
+      "confidence": "high",
+      "evidence": "Designed multi-region quorum replication with sub-5ms failover guarantees",
+      "years_of_experience": 6
+    }
+  ],
+  "projects": [
+    {
+      "id": "proj-1",
+      "title": "Chronos KV - Distributed Storage Engine",
+      "description": "High-throughput log-structured merge-tree store handling 2M ops/sec with Raft replication.",
+      "technologies": ["Rust", "Raft", "gRPC", "RocksDB"],
+      "live_url": "https://github.com/marcus-vance/chronos-kv"
+    }
+  ],
+  "internships_and_experience": [
+    {
+      "id": "exp-1",
+      "company": "Aurora Cloud Platforms",
+      "role": "Staff Distributed Systems Engineer",
+      "start_date": "2020-03",
+      "is_current": true,
+      "description": "Led core infrastructure storage layer supporting 15,000 tenants.",
+      "technologies": ["Rust", "Kubernetes", "Linux", "eBPF"]
+    }
+  ],
+  "certifications": [
+    {
+      "id": "cert-1",
+      "name": "Certified Kubernetes Security Specialist",
+      "issuer": "Linux Foundation / CNCF",
+      "issue_date": "2022-08"
+    }
+  ]
+}

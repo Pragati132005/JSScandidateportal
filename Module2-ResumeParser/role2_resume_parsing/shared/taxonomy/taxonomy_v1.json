@@ -1,0 +1,712 @@
+{
+  "taxonomy_version": "v1.1",
+  "categories": [
+    "COD", "DSA", "OOD", "APTI", "COMM", "AI", "CLOUD", "SQL", "SWE", "SYSD", "NETW", "OS", "OTHER"
+  ],
+  "skills": [
+    {
+      "canonical": "C++",
+      "aliases": ["cpp", "c plus plus"],
+      "category_code": "COD",
+      "ambiguous": false,
+      "note": "Programming language"
+    },
+    {
+      "canonical": "Python",
+      "aliases": ["python3", "py"],
+      "category_code": "COD",
+      "ambiguous": false,
+      "note": "Programming language"
+    },
+    {
+      "canonical": "Java",
+      "aliases": ["core java", "basic java"],
+      "category_code": "COD",
+      "ambiguous": false,
+      "note": "Programming language"
+    },
+    {
+      "canonical": "C",
+      "aliases": [],
+      "category_code": "COD",
+      "ambiguous": false,
+      "free_text_match": false,
+      "note": "Programming language; exact extractor output only"
+    },
+    {
+      "canonical": "C#",
+      "aliases": [],
+      "category_code": "COD",
+      "ambiguous": false,
+      "free_text_match": false,
+      "note": "Programming language; exact extractor output only"
+    },
+    {
+      "canonical": "Go",
+      "aliases": [],
+      "category_code": "COD",
+      "ambiguous": false,
+      "free_text_match": false,
+      "note": "Programming language; exact extractor output only"
+    },
+    {
+      "canonical": "R",
+      "aliases": [],
+      "category_code": "COD",
+      "ambiguous": false,
+      "free_text_match": false,
+      "note": "Programming language; exact extractor output only"
+    },
+    {
+      "canonical": "Rust",
+      "aliases": [],
+      "category_code": "COD",
+      "ambiguous": false,
+      "note": "Programming language"
+    },
+    {
+      "canonical": "JavaScript",
+      "aliases": [],
+      "category_code": "COD",
+      "ambiguous": false,
+      "note": "Programming language"
+    },
+    {
+      "canonical": "TypeScript",
+      "aliases": [],
+      "category_code": "COD",
+      "ambiguous": false,
+      "note": "Programming language"
+    },
+    {
+      "canonical": "Kotlin",
+      "aliases": [],
+      "category_code": "COD",
+      "ambiguous": false,
+      "note": "Programming language"
+    },
+    {
+      "canonical": "Swift",
+      "aliases": [],
+      "category_code": "COD",
+      "ambiguous": false,
+      "note": "Programming language"
+    },
+    {
+      "canonical": "PHP",
+      "aliases": [],
+      "category_code": "COD",
+      "ambiguous": false,
+      "note": "Programming language"
+    },
+    {
+      "canonical": "Ruby",
+      "aliases": [],
+      "category_code": "COD",
+      "ambiguous": false,
+      "note": "Programming language"
+    },
+    {
+      "canonical": "Lua",
+      "aliases": [],
+      "category_code": "COD",
+      "ambiguous": false,
+      "note": "Programming language"
+    },
+    {
+      "canonical": "Luau",
+      "aliases": [],
+      "category_code": "COD",
+      "ambiguous": false,
+      "note": "Programming language"
+    },
+    {
+      "canonical": "Dart",
+      "aliases": [],
+      "category_code": "COD",
+      "ambiguous": false,
+      "note": "Programming language"
+    },
+    {
+      "canonical": "Scala",
+      "aliases": [],
+      "category_code": "COD",
+      "ambiguous": false,
+      "note": "Programming language"
+    },
+    {
+      "canonical": "Bash/Shell",
+      "aliases": ["bash", "shell scripting", "shell"],
+      "category_code": "COD",
+      "ambiguous": false,
+      "note": "Programming and scripting language"
+    },
+    {
+      "canonical": "HTML",
+      "aliases": [],
+      "category_code": "COD",
+      "ambiguous": true,
+      "note": "Markup technology; default category COD"
+    },
+    {
+      "canonical": "CSS",
+      "aliases": [],
+      "category_code": "COD",
+      "ambiguous": true,
+      "note": "Styling technology; default category COD"
+    },
+    {
+      "canonical": "Data Structures & Algorithms",
+      "aliases": ["dsa", "data structures", "algorithms", "data structures and algorithms"],
+      "category_code": "DSA",
+      "ambiguous": false,
+      "note": "Core CS fundamental"
+    },
+    {
+      "canonical": "Competitive Programming",
+      "aliases": ["problem solving", "competitive coding", "cp"],
+      "category_code": "DSA",
+      "ambiguous": false,
+      "note": "Algorithms & problem solving"
+    },
+    {
+      "canonical": "Hash Maps",
+      "aliases": ["hash tables", "hashmap", "hashing"],
+      "category_code": "DSA",
+      "ambiguous": false,
+      "note": "Data structure"
+    },
+    {
+      "canonical": "Trees",
+      "aliases": ["binary trees", "bst", "trie", "graphs"],
+      "category_code": "DSA",
+      "ambiguous": false,
+      "note": "Data structure"
+    },
+    {
+      "canonical": "Linked Lists",
+      "aliases": ["linked list", "doubly linked list"],
+      "category_code": "DSA",
+      "ambiguous": false,
+      "note": "Data structure"
+    },
+    {
+      "canonical": "Stacks and Queues",
+      "aliases": ["stack", "queue", "priority queue", "heap"],
+      "category_code": "DSA",
+      "ambiguous": false,
+      "note": "Data structure"
+    },
+    {
+      "canonical": "Time and Space Complexity",
+      "aliases": ["asymptotic analysis", "big o", "complexity analysis"],
+      "category_code": "DSA",
+      "ambiguous": false,
+      "note": "Algorithm analysis"
+    },
+    {
+      "canonical": "String and Array Manipulation",
+      "aliases": ["string manipulation", "array manipulation", "interval problems"],
+      "category_code": "DSA",
+      "ambiguous": false,
+      "note": "Algorithm technique"
+    },
+    {
+      "canonical": "Object-Oriented Design",
+      "aliases": ["ood", "oop", "object-oriented programming", "object oriented design"],
+      "category_code": "OOD",
+      "ambiguous": false,
+      "note": "Object-oriented software principles"
+    },
+    {
+      "canonical": "Design Patterns",
+      "aliases": ["oop design patterns", "factory pattern", "strategy pattern", "singleton"],
+      "category_code": "OOD",
+      "ambiguous": false,
+      "note": "Software design patterns"
+    },
+    {
+      "canonical": "SOLID Principles",
+      "aliases": ["solid", "clean architecture"],
+      "category_code": "OOD",
+      "ambiguous": false,
+      "note": "OOD principles"
+    },
+    {
+      "canonical": "Inheritance and Polymorphism",
+      "aliases": ["inheritance", "polymorphism", "encapsulation", "abstraction"],
+      "category_code": "OOD",
+      "ambiguous": false,
+      "note": "Core OOP concepts"
+    },
+    {
+      "canonical": "Quantitative Aptitude",
+      "aliases": ["numerical ability", "arithmetic", "probability"],
+      "category_code": "APTI",
+      "ambiguous": false,
+      "note": "Mathematical reasoning"
+    },
+    {
+      "canonical": "Logical Reasoning",
+      "aliases": ["logical aptitude", "critical thinking", "data interpretation"],
+      "category_code": "APTI",
+      "ambiguous": false,
+      "note": "Aptitude and problem reasoning"
+    },
+    {
+      "canonical": "Communication",
+      "aliases": ["verbal communication", "written communication", "interpersonal skills", "coordination", "coordinating", "logistics"],
+      "category_code": "COMM",
+      "ambiguous": false,
+      "note": "Core interpersonal ability"
+    },
+    {
+      "canonical": "Presenting",
+      "aliases": ["presentation", "presentation skills", "public speaking", "presenting to non-technical audience", "presenting results to a non-technical audience", "presenting to stakeholders"],
+      "category_code": "COMM",
+      "ambiguous": false,
+      "note": "Presentation skills"
+    },
+    {
+      "canonical": "Team Collaboration",
+      "aliases": ["teamwork", "collaboration", "team collaboration"],
+      "category_code": "COMM",
+      "ambiguous": false,
+      "note": "Soft skill"
+    },
+    {
+      "canonical": "Leadership",
+      "aliases": [],
+      "category_code": "COMM",
+      "ambiguous": true,
+      "note": "Soft skill; default category COMM"
+    },
+    {
+      "canonical": "Technical Writing",
+      "aliases": ["technical documentation", "blogging", "tech writing"],
+      "category_code": "COMM",
+      "ambiguous": false,
+      "note": "Writing and documentation"
+    },
+    {
+      "canonical": "Mentoring",
+      "aliases": ["mentoring juniors", "peer tutoring", "coaching"],
+      "category_code": "COMM",
+      "ambiguous": false,
+      "note": "Team leadership & mentoring"
+    },
+    {
+      "canonical": "Machine Learning",
+      "aliases": ["ml", "basic machine learning", "machine learning fundamentals"],
+      "category_code": "AI",
+      "ambiguous": false,
+      "note": "Applied AI/ML"
+    },
+    {
+      "canonical": "scikit-learn",
+      "aliases": ["sklearn"],
+      "category_code": "AI",
+      "ambiguous": false,
+      "note": "Machine learning library"
+    },
+    {
+      "canonical": "Logistic Regression",
+      "aliases": ["regression vs classification", "linear regression", "churn prediction"],
+      "category_code": "AI",
+      "ambiguous": false,
+      "note": "Supervised learning algorithm"
+    },
+    {
+      "canonical": "Recommendation Systems",
+      "aliases": ["recommendation engine", "collaborative filtering"],
+      "category_code": "AI",
+      "ambiguous": false,
+      "note": "Applied ML application"
+    },
+    {
+      "canonical": "Feature Engineering",
+      "aliases": ["feature selection", "data preprocessing"],
+      "category_code": "AI",
+      "ambiguous": false,
+      "note": "ML workflow"
+    },
+    {
+      "canonical": "Model Evaluation",
+      "aliases": ["precision/recall", "roc-auc", "confusion matrix", "overfitting"],
+      "category_code": "AI",
+      "ambiguous": false,
+      "note": "ML evaluation"
+    },
+    {
+      "canonical": "AWS",
+      "aliases": ["amazon web services", "cloud infrastructure"],
+      "category_code": "CLOUD",
+      "ambiguous": false,
+      "note": "Cloud platform"
+    },
+    {
+      "canonical": "Azure",
+      "aliases": ["microsoft azure"],
+      "category_code": "CLOUD",
+      "ambiguous": false,
+      "note": "Cloud platform"
+    },
+    {
+      "canonical": "GCP",
+      "aliases": ["google cloud platform", "google cloud"],
+      "category_code": "CLOUD",
+      "ambiguous": false,
+      "note": "Cloud platform"
+    },
+    {
+      "canonical": "SQL",
+      "aliases": ["structured query language", "sql basic", "relational databases"],
+      "category_code": "SQL",
+      "ambiguous": false,
+      "note": "Database query language"
+    },
+    {
+      "canonical": "MySQL",
+      "aliases": ["my-sql"],
+      "category_code": "SQL",
+      "ambiguous": false,
+      "note": "RDBMS"
+    },
+    {
+      "canonical": "PostgreSQL",
+      "aliases": ["postgres"],
+      "category_code": "SQL",
+      "ambiguous": false,
+      "note": "RDBMS"
+    },
+    {
+      "canonical": "SQLite",
+      "aliases": [],
+      "category_code": "SQL",
+      "ambiguous": false,
+      "note": "Relational database"
+    },
+    {
+      "canonical": "MongoDB",
+      "aliases": ["mongo"],
+      "category_code": "SQL",
+      "ambiguous": true,
+      "note": "Database; default category SQL"
+    },
+    {
+      "canonical": "Schema Design",
+      "aliases": ["database design", "normalization", "normalized schema"],
+      "category_code": "SQL",
+      "ambiguous": false,
+      "note": "Relational data modeling"
+    },
+    {
+      "canonical": "Query Optimization",
+      "aliases": ["indexing", "query tuning", "database indexing"],
+      "category_code": "SQL",
+      "ambiguous": false,
+      "note": "Database performance"
+    },
+    {
+      "canonical": "Git",
+      "aliases": ["version control", "github", "git version control"],
+      "category_code": "SWE",
+      "ambiguous": false,
+      "note": "Version control"
+    },
+    {
+      "canonical": "CI/CD",
+      "aliases": ["continuous integration", "continuous deployment", "ci", "github actions"],
+      "category_code": "SWE",
+      "ambiguous": false,
+      "note": "Software delivery pipeline"
+    },
+    {
+      "canonical": "Testing",
+      "aliases": ["unit testing", "automated testing", "tests", "test driven development", "rate limiter", "rate limiting", "rate-limiter", "rate-limiter used in production"],
+      "category_code": "SWE",
+      "ambiguous": false,
+      "note": "Software quality assurance"
+    },
+    {
+      "canonical": "Agile",
+      "aliases": ["scrum", "sdlc", "software development lifecycle"],
+      "category_code": "SWE",
+      "ambiguous": false,
+      "note": "Engineering methodology"
+    },
+    {
+      "canonical": "Open-Source Contribution",
+      "aliases": ["open source", "open-source contributor", "merged prs"],
+      "category_code": "SWE",
+      "ambiguous": false,
+      "note": "Software engineering practice"
+    },
+    {
+      "canonical": "Docker",
+      "aliases": ["containers", "containerization"],
+      "category_code": "SWE",
+      "ambiguous": true,
+      "note": "Ambiguous: SWE vs CLOUD, v0 = SWE"
+    },
+    {
+      "canonical": "System Design",
+      "aliases": ["sys design", "distributed systems", "scalable architecture"],
+      "category_code": "SYSD",
+      "ambiguous": false,
+      "note": "Large-scale system architecture"
+    },
+    {
+      "canonical": "Pub-Sub Architecture",
+      "aliases": ["pub-sub", "message queue", "event-driven architecture"],
+      "category_code": "SYSD",
+      "ambiguous": false,
+      "note": "Distributed messaging"
+    },
+    {
+      "canonical": "Caching",
+      "aliases": ["cache", "redis cache", "distributed caching"],
+      "category_code": "SYSD",
+      "ambiguous": false,
+      "note": "System design pattern"
+    },
+    {
+      "canonical": "Load Balancing",
+      "aliases": ["load balancer", "horizontal scaling", "scalable workers"],
+      "category_code": "SYSD",
+      "ambiguous": false,
+      "note": "System design scalability"
+    },
+    {
+      "canonical": "Computer Networks",
+      "aliases": ["networking fundamentals", "computer networking", "networking", "cisco networking"],
+      "category_code": "NETW",
+      "ambiguous": false,
+      "note": "Networking fundamentals"
+    },
+    {
+      "canonical": "TCP/IP",
+      "aliases": ["tcp", "udp", "tcp/udp", "ip addressing"],
+      "category_code": "NETW",
+      "ambiguous": false,
+      "note": "Network protocols"
+    },
+    {
+      "canonical": "REST APIs",
+      "aliases": ["rest", "http", "restful api"],
+      "category_code": "NETW",
+      "ambiguous": false,
+      "note": "Web networking & protocols"
+    },
+    {
+      "canonical": "Operating Systems",
+      "aliases": ["os", "os-level", "operating system fundamentals"],
+      "category_code": "OS",
+      "ambiguous": false,
+      "note": "Core CS systems"
+    },
+    {
+      "canonical": "Linux",
+      "aliases": ["linux basics", "unix", "command line"],
+      "category_code": "OS",
+      "ambiguous": false,
+      "note": "Operating system and shell"
+    },
+    {
+      "canonical": "Process Scheduling",
+      "aliases": ["multithreading", "concurrency", "multithreaded", "multi-threaded", "threading", "process management"],
+      "category_code": "OS",
+      "ambiguous": false,
+      "note": "Operating system process management"
+    },
+    {
+      "canonical": "pandas",
+      "aliases": ["pandas library"],
+      "category_code": "OTHER",
+      "ambiguous": false,
+      "note": "Data manipulation library"
+    },
+    {
+      "canonical": "Power BI",
+      "aliases": ["powerbi"],
+      "category_code": "OTHER",
+      "ambiguous": false,
+      "note": "Business intelligence tool"
+    },
+    {
+      "canonical": "Excel",
+      "aliases": ["ms excel", "microsoft excel", "spreadsheets"],
+      "category_code": "OTHER",
+      "ambiguous": false,
+      "note": "Productivity and data analysis"
+    },
+    {
+      "canonical": "Statistics",
+      "aliases": ["statistical analysis", "descriptive statistics"],
+      "category_code": "OTHER",
+      "ambiguous": true,
+      "note": "Ambiguous: AI vs APTI vs OTHER, v0 = OTHER"
+    },
+    {
+      "canonical": "A/B Testing",
+      "aliases": ["ab testing", "a/b testing basics", "split testing"],
+      "category_code": "OTHER",
+      "ambiguous": false,
+      "note": "Experimental analysis"
+    },
+    {
+      "canonical": "Dashboards",
+      "aliases": ["data visualization", "reporting"],
+      "category_code": "OTHER",
+      "ambiguous": false,
+      "note": "Data visualization"
+    },
+    {
+      "canonical": "Anomaly Detection",
+      "aliases": ["outlier detection"],
+      "category_code": "OTHER",
+      "ambiguous": false,
+      "note": "Data analysis pattern"
+    },
+    {
+      "canonical": "Redis",
+      "aliases": ["redis-backed"],
+      "category_code": "OTHER",
+      "ambiguous": false,
+      "note": "In-memory datastore"
+    },
+    {
+      "canonical": "React",
+      "aliases": ["react.js"],
+      "category_code": "OTHER",
+      "ambiguous": false,
+      "note": "UI library"
+    },
+    {
+      "canonical": "Node.js",
+      "aliases": ["node", "nodejs"],
+      "category_code": "OTHER",
+      "ambiguous": true,
+      "note": "Runtime/tool; default category OTHER"
+    },
+    {
+      "canonical": "Django",
+      "aliases": [],
+      "category_code": "OTHER",
+      "ambiguous": false,
+      "note": "Web framework"
+    },
+    {
+      "canonical": "Flask",
+      "aliases": [],
+      "category_code": "OTHER",
+      "ambiguous": false,
+      "note": "Web framework"
+    },
+    {
+      "canonical": "Unity",
+      "aliases": [],
+      "category_code": "OTHER",
+      "ambiguous": false,
+      "note": "Game engine"
+    },
+    {
+      "canonical": "Photoshop",
+      "aliases": ["adobe photoshop"],
+      "category_code": "OTHER",
+      "ambiguous": false,
+      "note": "Design tool"
+    },
+    {
+      "canonical": "Ticketing Tools",
+      "aliases": ["jira", "helpdesk", "simulated tickets", "service desk"],
+      "category_code": "OTHER",
+      "ambiguous": false,
+      "note": "IT support tooling"
+    },
+    {
+      "canonical": "Troubleshooting and Escalations",
+      "aliases": ["troubleshooting", "escalations", "first-level troubleshooting"],
+      "category_code": "OTHER",
+      "ambiguous": false,
+      "note": "IT support operations"
+    },
+    {
+      "canonical": "VHDL",
+      "aliases": [],
+      "category_code": "COD",
+      "ambiguous": false,
+      "note": "Hardware description language"
+    },
+    {
+      "canonical": "MATLAB",
+      "aliases": [],
+      "category_code": "COD",
+      "ambiguous": false,
+      "note": "Technical computing environment"
+    },
+    {
+      "canonical": "Xilinx Vivado",
+      "aliases": ["Vivado"],
+      "category_code": "OTHER",
+      "ambiguous": false,
+      "note": "FPGA design tool"
+    },
+    {
+      "canonical": "VMware",
+      "aliases": ["VMware Workstation", "VMware Infrastructure", "VMware virtualization"],
+      "category_code": "CLOUD",
+      "ambiguous": false,
+      "note": "Virtualization platform"
+    },
+    {
+      "canonical": "Wireshark",
+      "aliases": ["Wireshark-based"],
+      "category_code": "NETW",
+      "ambiguous": false,
+      "note": "Network analysis tool"
+    },
+    {
+      "canonical": "Arduino",
+      "aliases": ["Arduino-controlled"],
+      "category_code": "COD",
+      "ambiguous": false,
+      "note": "Embedded prototyping platform"
+    },
+    {
+      "canonical": "PowerShell",
+      "aliases": ["PowerShell scripting"],
+      "category_code": "OS",
+      "ambiguous": false,
+      "note": "Shell and automation language"
+    },
+    {
+      "canonical": "Windows",
+      "aliases": ["Windows 10", "Windows 11", "Windows 10/11"],
+      "category_code": "OS",
+      "ambiguous": false,
+      "note": "Operating system"
+    },
+    {
+      "canonical": "McAfee",
+      "aliases": ["McAfee Endpoint Security"],
+      "category_code": "OTHER",
+      "ambiguous": false,
+      "note": "Endpoint security tool"
+    },
+    {
+      "canonical": "Acronis True Image",
+      "aliases": ["Acronis"],
+      "category_code": "OTHER",
+      "ambiguous": false,
+      "note": "Backup and recovery tool"
+    },
+    {
+      "canonical": "Memtest86",
+      "aliases": ["Memtest"],
+      "category_code": "OTHER",
+      "ambiguous": false,
+      "note": "Hardware diagnostics tool"
+    }
+  ]
+}

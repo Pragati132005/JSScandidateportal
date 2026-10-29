@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "radix-talent-check"
+version = "1.0.0"
+description = "Evidence-based RADIX Talent Match Module 4"
+requires-python = ">=3.10"
+dependencies = [
+  "fastapi>=0.110,<1.0",
+  "uvicorn[standard]>=0.27,<1.0",
+  "pandas>=2.0,<3.0",
+  "pydantic>=2.6,<3.0",
+  "supabase>=2.4,<3.0",
+]
+
+[project.optional-dependencies]
+test = ["pytest>=8.0", "httpx>=0.27"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

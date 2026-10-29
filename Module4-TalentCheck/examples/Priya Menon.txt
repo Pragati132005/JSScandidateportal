@@ -1,0 +1,18 @@
+Priya Menon
+Entry-level, support-oriented — best fit for the Oracle FSS roles, weaker fit for Google / Microsoft
+Education
+B.Tech, Information Technology, Class of 2026 — CGPA 7.4 / 10
+Technical Skills
+SQL (basic), Java, Linux basics, Networking fundamentals, MS Excel, exposure to ticketing tools
+Projects
+Built a simple student attendance tracker using Java and a MySQL backend for a college project
+Contributed to a college helpdesk simulation project, resolving simulated tickets and logging resolutions
+Hackathons / Internships
+Summer intern, IT support desk at a local business — handled first-level troubleshooting and escalations
+Participated (non-finalist), 12-hour campus hackathon
+Certifications
+Cisco Networking Basics (online course)
+Achievements
+Volunteer coordinator for a college technical fest, coordinating logistics across teams
+Preferred Roles
+Application Support Analyst, Associate Software Engineer

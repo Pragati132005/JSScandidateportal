@@ -1,0 +1,246 @@
+{
+  "schema_version": "1.0",
+  "source_type": "resume",
+  "source_file": "Priya_Menon.pdf",
+  "company": null,
+  "role": null,
+  "skills": [
+    {
+      "skill_name": "SQL",
+      "category_code": "SQL",
+      "evidence": "SQL (basic), Java, Linux basics, Networking fundamentals",
+      "confidence": "high",
+      "evidence_verified": true,
+      "source_section": "technical_skills"
+    },
+    {
+      "skill_name": "Java",
+      "category_code": "COD",
+      "evidence": "SQL (basic), Java, Linux basics, Networking fundamentals",
+      "confidence": "high",
+      "evidence_verified": true,
+      "source_section": "technical_skills"
+    },
+    {
+      "skill_name": "Linux",
+      "category_code": "OS",
+      "evidence": "SQL (basic), Java, Linux basics, Networking fundamentals",
+      "confidence": "high",
+      "evidence_verified": true,
+      "source_section": "technical_skills"
+    },
+    {
+      "skill_name": "Computer Networks",
+      "category_code": "NETW",
+      "evidence": "Networking fundamentals, MS Excel, exposure to ticketing tools",
+      "confidence": "high",
+      "evidence_verified": true,
+      "source_section": "technical_skills"
+    },
+    {
+      "skill_name": "Excel",
+      "category_code": "OTHER",
+      "evidence": "Networking fundamentals, MS Excel, exposure to ticketing tools",
+      "confidence": "high",
+      "evidence_verified": true,
+      "source_section": "technical_skills"
+    },
+    {
+      "skill_name": "Ticketing Tools",
+      "category_code": "OTHER",
+      "evidence": "exposure to ticketing tools",
+      "confidence": "high",
+      "evidence_verified": true,
+      "source_section": "technical_skills"
+    },
+    {
+      "skill_name": "MySQL",
+      "category_code": "SQL",
+      "evidence": "Built a simple student attendance tracker using Java and a MySQL backend for a college project",
+      "confidence": "medium",
+      "evidence_verified": true,
+      "source_section": "projects"
+    },
+    {
+      "skill_name": "Troubleshooting and Escalations",
+      "category_code": "OTHER",
+      "evidence": "handled first-level troubleshooting and escalations",
+      "confidence": "medium",
+      "evidence_verified": true,
+      "source_section": "internships"
+    },
+    {
+      "skill_name": "Coordination",
+      "category_code": "COMM",
+      "evidence": "Volunteer coordinator for a college technical fest, coordinating logistics across teams",
+      "confidence": "low",
+      "evidence_verified": true,
+      "source_section": "achievements"
+    }
+  ],
+  "profile_prefill": {
+    "name": "Priya Menon",
+    "email": null,
+    "education": "B.Tech, Information Technology, Class of 2026 — CGPA 7.4 / 10",
+    "skills": [
+      {
+        "skill_name": "SQL",
+        "category_code": "SQL",
+        "evidence": "SQL (basic), Java, Linux basics, Networking fundamentals",
+        "confidence": "high",
+        "evidence_verified": true,
+        "source_section": "technical_skills"
+      },
+      {
+        "skill_name": "Java",
+        "category_code": "COD",
+        "evidence": "SQL (basic), Java, Linux basics, Networking fundamentals",
+        "confidence": "high",
+        "evidence_verified": true,
+        "source_section": "technical_skills"
+      },
+      {
+        "skill_name": "Linux",
+        "category_code": "OS",
+        "evidence": "SQL (basic), Java, Linux basics, Networking fundamentals",
+        "confidence": "high",
+        "evidence_verified": true,
+        "source_section": "technical_skills"
+      },
+      {
+        "skill_name": "Computer Networks",
+        "category_code": "NETW",
+        "evidence": "Networking fundamentals, MS Excel, exposure to ticketing tools",
+        "confidence": "high",
+        "evidence_verified": true,
+        "source_section": "technical_skills"
+      },
+      {
+        "skill_name": "Excel",
+        "category_code": "OTHER",
+        "evidence": "Networking fundamentals, MS Excel, exposure to ticketing tools",
+        "confidence": "high",
+        "evidence_verified": true,
+        "source_section": "technical_skills"
+      },
+      {
+        "skill_name": "Ticketing Tools",
+        "category_code": "OTHER",
+        "evidence": "exposure to ticketing tools",
+        "confidence": "high",
+        "evidence_verified": true,
+        "source_section": "technical_skills"
+      },
+      {
+        "skill_name": "MySQL",
+        "category_code": "SQL",
+        "evidence": "Built a simple student attendance tracker using Java and a MySQL backend for a college project",
+        "confidence": "medium",
+        "evidence_verified": true,
+        "source_section": "projects"
+      },
+      {
+        "skill_name": "Troubleshooting and Escalations",
+        "category_code": "OTHER",
+        "evidence": "handled first-level troubleshooting and escalations",
+        "confidence": "medium",
+        "evidence_verified": true,
+        "source_section": "internships"
+      },
+      {
+        "skill_name": "Coordination",
+        "category_code": "COMM",
+        "evidence": "Volunteer coordinator for a college technical fest, coordinating logistics across teams",
+        "confidence": "low",
+        "evidence_verified": true,
+        "source_section": "achievements"
+      }
+    ],
+    "hackathons": [
+      {
+        "title": "12-hour campus hackathon",
+        "result": "Participated (non-finalist)",
+        "kind": "hackathon",
+        "description": "Participated in 12-hour campus hackathon"
+      }
+    ],
+    "internships": [
+      {
+        "role": "Summer intern, IT support desk",
+        "organization": "Local business",
+        "description": "handled first-level troubleshooting and escalations"
+      }
+    ],
+    "certifications": [
+      "Cisco Networking Basics (online course)"
+    ],
+    "preferred_roles": [
+      "Application Support Analyst",
+      "Associate Software Engineer"
+    ],
+    "cv_file": "Priya_Menon.pdf"
+  },
+  "details": {
+    "phone": null,
+    "links": [],
+    "education_details": [
+      {
+        "degree": "B.Tech",
+        "field": "Information Technology",
+        "institution": null,
+        "graduation_year": 2026,
+        "grade": "7.4 / 10",
+        "grade_scale": "CGPA"
+      }
+    ],
+    "projects": [
+      {
+        "title": "Student attendance tracker",
+        "description": "Built a simple student attendance tracker using Java and a MySQL backend for a college project",
+        "technologies": ["Java", "MySQL"]
+      },
+      {
+        "title": "Helpdesk simulation project",
+        "description": "Contributed to a college helpdesk simulation project, resolving simulated tickets and logging resolutions",
+        "technologies": ["Ticketing Tools"]
+      }
+    ],
+    "experience": [
+      {
+        "role": "Summer intern, IT support desk",
+        "organization": "Local business",
+        "description": "handled first-level troubleshooting and escalations"
+      }
+    ],
+    "achievements": [
+      "Volunteer coordinator for a college technical fest, coordinating logistics across teams"
+    ]
+  },
+  "category_summary": null,
+  "meta": {
+    "parser_version": "1.0",
+    "prompt_version": "p1",
+    "taxonomy_version": "v1",
+    "model_used": "manual-fixture",
+    "from_cache": false,
+    "input_format": "pdf",
+    "parse_warnings": [
+      "No email or phone listed in resume"
+    ],
+    "categories_without_evidence": [
+      "DSA",
+      "OOD",
+      "AI",
+      "CLOUD",
+      "SYSD",
+      "APTI"
+    ],
+    "field_confidence": {
+      "name": "high",
+      "email": "none",
+      "education": "high",
+      "skills": "high"
+    },
+    "processing_ms": 0
+  }
+}

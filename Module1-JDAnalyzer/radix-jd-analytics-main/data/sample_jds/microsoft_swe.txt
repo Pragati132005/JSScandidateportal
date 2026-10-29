@@ -1,0 +1,21 @@
+Company: Microsoft Corporation
+Role: Software Engineer
+Location: Hyderabad, Telangana, India
+
+About the Job:
+Microsoft is looking for passionate Software Engineers to join Azure Core Engineering. You will work on cutting-edge cloud infrastructure that powers global enterprises and services millions of concurrent requests.
+
+Key Responsibilities:
+- Develop highly resilient cloud services and microservices deployed on Azure.
+- Implement robust algorithms and efficient data structures to optimize latency and compute resources.
+- Participate in design reviews, adhering to Object-Oriented principles and clean code practices.
+- Implement continuous integration and automated testing frameworks to deliver enterprise reliability.
+- Troubleshoot complex distributed systems anomalies across networking layers and operating systems.
+
+Qualifications:
+- Bachelor's degree in Computer Science or related technical discipline.
+- 1+ years or equivalent project experience coding in C#, C++, Java, or Python.
+- Proven problem-solving skills using Data Structures and Algorithms.
+- Working knowledge of RESTful API design and networking protocols (HTTP/HTTPS, TCP/IP).
+- Understanding of multi-threaded programming, memory management, and Windows/Linux operating system internals.
+- Strong team communication and willingness to collaborate across distributed agile squads.

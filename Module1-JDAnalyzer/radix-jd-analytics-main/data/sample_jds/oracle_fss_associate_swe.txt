@@ -1,0 +1,22 @@
+Company: Oracle Financial Services Software
+Role: Associate Software Engineer
+Location: Bengaluru / Mumbai, India
+
+About the Role:
+Oracle Financial Services Software provides world-class banking and financial enterprise platforms. We are seeking early-career engineers to join our engineering and product delivery teams.
+
+Key Responsibilities:
+- Participate in the development and enhancement of core banking and financial applications.
+- Write database queries, stored procedures, and triggers using Oracle DB and SQL.
+- Develop backend services using Core Java, Spring framework, and REST APIs.
+- Adhere to software engineering standards, version control (Git), and code documentation.
+- Assist in investigating customer tickets, defect triage, and software patch delivery.
+
+Requirements:
+- Bachelor of Engineering (BE/BTech) in Computer Science, Information Technology, or related field.
+- Strong fundamentals in Object-Oriented Programming (OOP) with Java or C++.
+- Solid understanding of Relational Database Management Systems (RDBMS) and SQL.
+- Basic knowledge of operating system fundamentals (Linux/Unix commands and file systems).
+- High analytical and aptitude skills with logical reasoning.
+- Good communication skills for interacting with team members and banking domain experts.
+- Willingness to learn financial domain workflows and compliance requirements.

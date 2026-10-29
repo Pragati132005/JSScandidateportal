@@ -1,0 +1,20 @@
+# RADIX Talent Match - Role 1: JD Analytics Dependencies
+# Core & Schema
+pydantic>=2.0.0
+python-dotenv>=1.0.0
+
+# Document Parsing
+pypdf>=4.0.0
+python-docx>=1.0.0
+
+# LLM Providers (supports Gemini, OpenAI, or LangChain)
+google-genai>=0.1.0
+google-generativeai>=0.8.0
+openai>=1.0.0
+langchain>=0.2.0
+langchain-core>=0.2.0
+
+# Optional API server for team integration
+fastapi>=0.110.0
+uvicorn>=0.28.0
+python-multipart>=0.0.9

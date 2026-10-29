@@ -1,0 +1,27 @@
+{
+  "schema_version": "1.0.0",
+  "profile_id": "test-invalid-profile-999",
+  "last_updated": "2026-10-24T20:00:00.000Z",
+  "personal_info": {
+    "full_name": "Invalid Candidate",
+    "headline": "Tester",
+    "email": "invalid-email-format",
+    "phone": "123",
+    "location": "Somewhere",
+    "bio": "Test bio"
+  },
+  "preferred_roles": [],
+  "education": [],
+  "skills": [
+    {
+      "id": "skill-1",
+      "name": "Invalid Skill",
+      "category": "INVALID_CATEGORY_CODE",
+      "confidence": "super_high",
+      "evidence": "Fake evidence"
+    }
+  ],
+  "projects": [],
+  "internships_and_experience": [],
+  "certifications": []
+}

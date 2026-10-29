@@ -1,0 +1,23 @@
+{
+  "needs_human_review": true,
+  "candidate_name": "Priya Menon",
+  "education_summary": "B.Tech, Information Technology, Class of 2026 — CGPA 7.4 / 10",
+  "core_skills": [
+    {"canonical": "SQL", "category_code": "SQL"},
+    {"canonical": "Java", "category_code": "COD"},
+    {"canonical": "Linux", "category_code": "OS"},
+    {"canonical": "Computer Networks", "category_code": "NETW"},
+    {"canonical": "Excel", "category_code": "OTHER"},
+    {"canonical": "Ticketing Tools", "category_code": "OTHER"}
+  ],
+  "implied_skills": [
+    {"canonical": "MySQL", "category_code": "SQL"},
+    {"canonical": "Troubleshooting and Escalations", "category_code": "OTHER"},
+    {"canonical": "Communication", "category_code": "COMM"}
+  ],
+  "absent_categories": ["DSA", "OOD", "AI", "CLOUD", "SYSD", "APTI"],
+  "hackathon_count": 1,
+  "internship_count": 1,
+  "certifications": ["Cisco Networking Basics (online course)"],
+  "preferred_roles": ["Application Support Analyst", "Associate Software Engineer"]
+}

@@ -1,0 +1,22 @@
+# Environment variables (NEVER commit your real API keys)
+.env
+
+# Python cache & artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+.venv/
+
+# Temp folders
+temp_uploads/
+.pytest_cache/
+
+# IDE files
+.vscode/
+.idea/
+*.swp

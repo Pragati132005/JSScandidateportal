@@ -1,0 +1,26 @@
+Company: Google LLC
+Role: Data Scientist
+Location: Bengaluru, Karnataka, India
+
+About the Job:
+Data Scientists at Google evaluate and improve products. You will collaborate with engineering and product management to understand user behavior, solve complex data challenges, and build machine learning models that influence product strategy and user experiences worldwide.
+
+Key Responsibilities:
+- Formulate business and product problems into rigorous machine learning, statistical, and mathematical formulations.
+- Build predictive modeling pipelines, deep learning architectures, and statistical models using Python.
+- Perform large-scale data querying, feature extraction, and ETL processes using advanced SQL and distributed data warehouses.
+- Design, deploy, and evaluate online A/B testing and statistical experiments.
+- Translate quantitative findings into clear strategic recommendations and communicate them effectively to technical and non-technical stakeholders.
+
+Minimum Qualifications:
+- Master's or Bachelor's degree in a quantitative discipline (Statistics, Computer Science, Mathematics, Data Science) or equivalent experience.
+- Proficiency in Python and data science libraries (NumPy, Pandas, Scikit-Learn, PyTorch or TensorFlow).
+- Strong command of SQL querying, complex joins, aggregations, and relational database concepts.
+- Solid background in probability, statistics, hypothesis testing, and quantitative problem-solving.
+- Strong analytical aptitude and ability to dissect unstructured datasets.
+
+Preferred Qualifications:
+- Experience deploying machine learning models on Cloud platforms (Google Cloud Platform / Vertex AI, AWS).
+- Knowledge of large language models (LLMs), prompt engineering, and modern generative AI techniques.
+- Experience with BigQuery, Apache Spark, and distributed computing frameworks.
+- Excellent presentation, data visualization, and cross-functional communication abilities.

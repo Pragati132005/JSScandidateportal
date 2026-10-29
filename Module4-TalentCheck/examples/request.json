@@ -1,0 +1,18 @@
+{
+  "company": "Google LLC",
+  "profile": {
+    "name": "Ananya Rao",
+    "education": "B.Tech Computer Science, CGPA 8.6/10",
+    "skills": [
+      {"skill_name": "C++", "category_code": "COD", "evidence": "Implemented a multithreaded job scheduler in C++"},
+      {"skill_name": "Data Structures and Algorithms", "category_code": "DSA", "evidence": "Solved 350+ competitive programming problems"},
+      {"skill_name": "Operating Systems", "category_code": "OS", "evidence": "Simulated Round Robin, Priority and SJF process scheduling"},
+      {"skill_name": "System Design", "category_code": "SYSD", "evidence": "Built a distributed URL-shortening service with Redis cache and horizontally-scalable API"}
+    ],
+    "projects": [
+      "Built a distributed URL-shortening service with a Redis-backed cache and a horizontally-scalable API layer",
+      "Implemented a multithreaded job scheduler in C++ simulating OS-level process scheduling algorithms"
+    ],
+    "internships": ["Backend intern at a product startup; shipped a production rate-limiter"]
+  }
+}

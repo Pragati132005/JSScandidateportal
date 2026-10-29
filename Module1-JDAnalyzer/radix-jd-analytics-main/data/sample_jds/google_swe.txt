@@ -1,0 +1,27 @@
+Company: Google LLC
+Role: Software Engineer (SWE)
+Location: Bengaluru, Karnataka, India (Hybrid)
+
+About the Job:
+Google's software engineers develop the next-generation technologies that change how billions of users connect, explore, and interact with information. We need our engineers to be versatile, display leadership qualities, and be enthusiastic about taking on new problems across the full stack as we continue to push technology forward.
+
+Key Responsibilities:
+- Design, develop, test, deploy, maintain, and enhance large-scale distributed software solutions.
+- Manage individual project priorities, deadlines, and deliverables using Agile methodologies.
+- Write robust, clean, maintainable, and high-performance code adhering to Google's engineering standards.
+- Collaborate with cross-functional teams including product managers, UX designers, and site reliability engineers.
+- Architect high-throughput microservices and APIs with low latency and high availability.
+
+Minimum Qualifications:
+- Bachelor's degree in Computer Science, Computer Engineering, or related technical field, or equivalent practical experience.
+- Experience with software development in one or more general-purpose programming languages, including but not limited to: Java, C++, Python, or Go.
+- Strong foundational knowledge in Data Structures and Algorithms (trees, graphs, hashing, sorting, dynamic programming).
+- Solid grasp of Object-Oriented Design (OOD) and software design patterns.
+- Experience with Linux/Unix operating systems, process management, concurrency, and multithreading.
+
+Preferred Qualifications:
+- Experience building and designing large-scale distributed systems and microservices architectures.
+- Experience with Google Cloud Platform (GCP), Kubernetes, and containerized deployments with Docker.
+- Experience with relational database design and SQL (PostgreSQL, MySQL) as well as NoSQL data stores.
+- Familiarity with CI/CD automation pipelines, automated unit testing, and code reviews.
+- Excellent written and verbal communication and teamwork skills.

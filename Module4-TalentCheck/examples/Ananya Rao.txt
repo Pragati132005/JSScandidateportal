@@ -1,0 +1,19 @@
+Ananya Rao
+Systems-leaning generalist — strong fit for SWE-heavy roles, weaker fit for data roles
+Education
+B.Tech, Computer Science and Engineering, Class of 2026 — CGPA 8.6 / 10
+Technical Skills
+C++, Python, Java, Data Structures & Algorithms, Operating Systems, Computer Networks, Object-Oriented Design, Git, Linux
+Projects
+Built a distributed URL-shortening service with a Redis-backed cache and a horizontally-scalable API layer as a capstone systems project
+Implemented a multithreaded job scheduler in C++ simulating OS-level process scheduling algorithms (Round Robin, Priority, SJF)
+Designed a parking-lot management system in Java using OOP design patterns (Factory, Strategy) as a design-practice exercise
+Hackathons / Internships
+Finalist, national-level 24-hour hackathon — built a real-time chat backend
+Summer intern, backend team at a mid-size product startup — shipped a rate-limiter used in production
+Certifications
+None listed
+Achievements
+Solved 350+ problems on competitive programming platforms; mentors juniors on DSA through the college coding club
+Preferred Roles
+Software Engineer, Backend Engineer

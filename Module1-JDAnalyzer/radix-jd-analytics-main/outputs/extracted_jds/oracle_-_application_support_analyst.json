@@ -1,0 +1,44 @@
+{
+  "source_type": "jd",
+  "source_file": "Oracle - Application Support Analyst.pdf",
+  "company": "Oracle Financial Services Software",
+  "role": "Application Support Analyst",
+  "skills": [
+    {
+      "skill_name": "SQL",
+      "category_code": "SQL",
+      "evidence": "Query production databases to diagnose issues; Comfort with basic SQL \u2014 simple SELECT/WHERE queries and an understanding of primary keys",
+      "confidence": "high"
+    },
+    {
+      "skill_name": "Linux Fundamentals",
+      "category_code": "OS",
+      "evidence": "Operating systems and Linux fundamentals \u2014 basic command-line usage, what a log file is, batch vs. real-time processing",
+      "confidence": "high"
+    },
+    {
+      "skill_name": "Networking",
+      "category_code": "NETW",
+      "evidence": "Basic networking knowledge \u2014 what an IP address is, client-server architecture fundamentals, and what \u201clatency\u201d means in practice",
+      "confidence": "high"
+    },
+    {
+      "skill_name": "Logical Reasoning & Problem Solving",
+      "category_code": "APTI",
+      "evidence": "Strong quantitative and logical reasoning \u2014 data interpretation from tables, arithmetic, and structured problem-solving",
+      "confidence": "high"
+    },
+    {
+      "skill_name": "Communication & Client Management",
+      "category_code": "COMM",
+      "evidence": "Communicate clearly and calmly with clients during incidents; able to explain a technical issue to a non-technical client",
+      "confidence": "high"
+    },
+    {
+      "skill_name": "Ticketing & Incident Management Systems",
+      "category_code": "SWE",
+      "evidence": "Prior exposure to a ticketing/incident system",
+      "confidence": "medium"
+    }
+  ]
+}

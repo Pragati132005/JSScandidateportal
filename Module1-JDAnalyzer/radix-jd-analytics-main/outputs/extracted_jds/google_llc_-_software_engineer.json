@@ -1,0 +1,68 @@
+{
+  "source_type": "jd",
+  "source_file": "Google LLC - Software Engineer.pdf",
+  "company": "Google LLC",
+  "role": "Software Engineer (SWE)",
+  "skills": [
+    {
+      "skill_name": "Data Structures & Algorithms",
+      "category_code": "DSA",
+      "evidence": "Strong grasp of data structures and algorithms, and the ability to reason about time and space complexity",
+      "confidence": "high"
+    },
+    {
+      "skill_name": "Coding & Programming",
+      "category_code": "COD",
+      "evidence": "Hands-on programming ability \u2014 you can turn a problem statement into working, efficient code quickly",
+      "confidence": "high"
+    },
+    {
+      "skill_name": "Operating Systems",
+      "category_code": "OS",
+      "evidence": "Working knowledge of operating systems fundamentals (processes, threads, virtual memory)",
+      "confidence": "high"
+    },
+    {
+      "skill_name": "Networking & Protocols",
+      "category_code": "NETW",
+      "evidence": "Core networking concepts (TCP/UDP, HTTP, how a web request actually travels)",
+      "confidence": "high"
+    },
+    {
+      "skill_name": "Object-Oriented Design",
+      "category_code": "OOD",
+      "evidence": "Experience or coursework in object-oriented design and common design patterns",
+      "confidence": "high"
+    },
+    {
+      "skill_name": "System Design & Scalability",
+      "category_code": "SYSD",
+      "evidence": "Comfort reasoning about system design at scale \u2014 able to sketch how a large distributed system",
+      "confidence": "high"
+    },
+    {
+      "skill_name": "Software Engineering Practices",
+      "category_code": "SWE",
+      "evidence": "Solid software engineering fundamentals: testing strategy, code review habits, awareness of technical debt, and basic CI/CD concepts",
+      "confidence": "high"
+    },
+    {
+      "skill_name": "Communication",
+      "category_code": "COMM",
+      "evidence": "Clear written and verbal communication \u2014 able to explain a technical tradeoff",
+      "confidence": "high"
+    },
+    {
+      "skill_name": "Distributed Systems",
+      "category_code": "SYSD",
+      "evidence": "Design, develop, test, and maintain large-scale distributed systems",
+      "confidence": "high"
+    },
+    {
+      "skill_name": "Cross-Functional Collaboration",
+      "category_code": "COMM",
+      "evidence": "Collaborate closely with cross-functional partners across product, design, and SRE",
+      "confidence": "high"
+    }
+  ]
+}

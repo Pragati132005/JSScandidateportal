@@ -1,0 +1,28 @@
+{
+  "needs_human_review": true,
+  "candidate_name": "Karthik Subramaniam",
+  "education_summary": "B.Tech, Computer Science and Engineering, Class of 2026 — CGPA 8.2 / 10",
+  "core_skills": [
+    {"canonical": "SQL", "category_code": "SQL"},
+    {"canonical": "Python", "category_code": "COD"},
+    {"canonical": "pandas", "category_code": "OTHER"},
+    {"canonical": "scikit-learn", "category_code": "AI"},
+    {"canonical": "Power BI", "category_code": "OTHER"},
+    {"canonical": "Statistics", "category_code": "OTHER"},
+    {"canonical": "A/B Testing", "category_code": "OTHER"},
+    {"canonical": "Excel", "category_code": "OTHER"},
+    {"canonical": "Java", "category_code": "COD"}
+  ],
+  "implied_skills": [
+    {"canonical": "Machine Learning", "category_code": "AI"},
+    {"canonical": "Schema Design", "category_code": "SQL"},
+    {"canonical": "Dashboards", "category_code": "OTHER"},
+    {"canonical": "Anomaly Detection", "category_code": "OTHER"},
+    {"canonical": "Presenting", "category_code": "COMM"}
+  ],
+  "absent_categories": ["DSA", "OOD", "OS", "NETW", "SYSD", "SWE", "CLOUD", "APTI"],
+  "hackathon_count": 1,
+  "internship_count": 1,
+  "certifications": ["Google Data Analytics Certificate"],
+  "preferred_roles": ["Data Analyst", "Data Scientist"]
+}

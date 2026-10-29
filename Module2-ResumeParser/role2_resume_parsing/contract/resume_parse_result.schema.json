@@ -1,0 +1,832 @@
+{
+  "$defs": {
+    "CategorySummaryItem": {
+      "additionalProperties": false,
+      "description": "Category rollup summary for Role 4 Talent Check input.",
+      "properties": {
+        "category_code": {
+          "enum": [
+            "COD",
+            "DSA",
+            "OOD",
+            "APTI",
+            "COMM",
+            "AI",
+            "CLOUD",
+            "SQL",
+            "SWE",
+            "SYSD",
+            "NETW",
+            "OS",
+            "OTHER"
+          ],
+          "title": "Category Code",
+          "type": "string"
+        },
+        "skill_count": {
+          "default": 0,
+          "title": "Skill Count",
+          "type": "integer"
+        },
+        "strongest_confidence": {
+          "anyOf": [
+            {
+              "enum": [
+                "high",
+                "medium",
+                "low"
+              ],
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Strongest Confidence"
+        },
+        "strongest_evidence": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Strongest Evidence"
+        },
+        "has_evidence": {
+          "default": false,
+          "title": "Has Evidence",
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "category_code"
+      ],
+      "title": "CategorySummaryItem",
+      "type": "object"
+    },
+    "Details": {
+      "additionalProperties": false,
+      "description": "Extended extracted candidate details.",
+      "properties": {
+        "phone": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Phone"
+        },
+        "links": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Links",
+          "type": "array"
+        },
+        "education_details": {
+          "items": {
+            "$ref": "#/$defs/EducationDetail"
+          },
+          "title": "Education Details",
+          "type": "array"
+        },
+        "projects": {
+          "items": {
+            "$ref": "#/$defs/ProjectDetail"
+          },
+          "title": "Projects",
+          "type": "array"
+        },
+        "experience": {
+          "items": {
+            "$ref": "#/$defs/ExperienceDetail"
+          },
+          "title": "Experience",
+          "type": "array"
+        },
+        "achievements": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Achievements",
+          "type": "array"
+        }
+      },
+      "title": "Details",
+      "type": "object"
+    },
+    "DroppedSkill": {
+      "additionalProperties": false,
+      "description": "Audit record for a claimed skill rejected during grounding.",
+      "properties": {
+        "skill_name": {
+          "title": "Skill Name",
+          "type": "string"
+        },
+        "claimed_evidence": {
+          "title": "Claimed Evidence",
+          "type": "string"
+        },
+        "reason": {
+          "title": "Reason",
+          "type": "string"
+        }
+      },
+      "required": [
+        "skill_name",
+        "claimed_evidence",
+        "reason"
+      ],
+      "title": "DroppedSkill",
+      "type": "object"
+    },
+    "EducationDetail": {
+      "additionalProperties": false,
+      "description": "Structured breakdown of education.",
+      "properties": {
+        "degree": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Degree"
+        },
+        "field": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Field"
+        },
+        "institution": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Institution"
+        },
+        "graduation_year": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Graduation Year"
+        },
+        "grade": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Grade"
+        },
+        "grade_scale": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Grade Scale"
+        }
+      },
+      "title": "EducationDetail",
+      "type": "object"
+    },
+    "ExperienceDetail": {
+      "additionalProperties": false,
+      "description": "Structured breakdown of work/experience entry.",
+      "properties": {
+        "role": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Role"
+        },
+        "organization": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Organization"
+        },
+        "description": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Description"
+        }
+      },
+      "title": "ExperienceDetail",
+      "type": "object"
+    },
+    "HackathonItem": {
+      "additionalProperties": false,
+      "description": "Parsed hackathon or competition record.",
+      "properties": {
+        "title": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Title of hackathon or competition",
+          "title": "Title"
+        },
+        "result": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Result / standing (Winner, Finalist, Runner-up, Participant)",
+          "title": "Result"
+        },
+        "kind": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": "hackathon",
+          "description": "hackathon or competition",
+          "title": "Kind"
+        },
+        "description": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Project / task description",
+          "title": "Description"
+        }
+      },
+      "title": "HackathonItem",
+      "type": "object"
+    },
+    "InternshipItem": {
+      "additionalProperties": false,
+      "description": "Parsed internship or work experience entry.",
+      "properties": {
+        "role": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Internship job role or title",
+          "title": "Role"
+        },
+        "organization": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Company or organization name",
+          "title": "Organization"
+        },
+        "description": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Work description and outcomes",
+          "title": "Description"
+        }
+      },
+      "title": "InternshipItem",
+      "type": "object"
+    },
+    "ParserMeta": {
+      "additionalProperties": false,
+      "description": "Audit metadata for parser execution.",
+      "properties": {
+        "parser_version": {
+          "default": "1.3",
+          "title": "Parser Version",
+          "type": "string"
+        },
+        "prompt_version": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": "p4",
+          "title": "Prompt Version"
+        },
+        "taxonomy_version": {
+          "default": "v1",
+          "title": "Taxonomy Version",
+          "type": "string"
+        },
+        "model_used": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Model Used"
+        },
+        "from_cache": {
+          "default": false,
+          "title": "From Cache",
+          "type": "boolean"
+        },
+        "input_format": {
+          "anyOf": [
+            {
+              "enum": [
+                "pdf",
+                "docx"
+              ],
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Input Format"
+        },
+        "parse_warnings": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Parse Warnings",
+          "type": "array"
+        },
+        "dropped_skills": {
+          "items": {
+            "$ref": "#/$defs/DroppedSkill"
+          },
+          "title": "Dropped Skills",
+          "type": "array"
+        },
+        "categories_without_evidence": {
+          "items": {
+            "enum": [
+              "COD",
+              "DSA",
+              "OOD",
+              "APTI",
+              "COMM",
+              "AI",
+              "CLOUD",
+              "SQL",
+              "SWE",
+              "SYSD",
+              "NETW",
+              "OS",
+              "OTHER"
+            ],
+            "type": "string"
+          },
+          "title": "Categories Without Evidence",
+          "type": "array"
+        },
+        "suggested_manual_additions": {
+          "items": {
+            "enum": [
+              "COD",
+              "DSA",
+              "OOD",
+              "APTI",
+              "COMM",
+              "AI",
+              "CLOUD",
+              "SQL",
+              "SWE",
+              "SYSD",
+              "NETW",
+              "OS",
+              "OTHER"
+            ],
+            "type": "string"
+          },
+          "title": "Suggested Manual Additions",
+          "type": "array"
+        },
+        "field_confidence": {
+          "additionalProperties": {
+            "type": "string"
+          },
+          "title": "Field Confidence",
+          "type": "object"
+        },
+        "processing_ms": {
+          "default": 0,
+          "title": "Processing Ms",
+          "type": "integer"
+        }
+      },
+      "title": "ParserMeta",
+      "type": "object"
+    },
+    "ProfilePrefill": {
+      "additionalProperties": false,
+      "description": "Candidate profile shape for Role 3 Profile Builder pre-fill.",
+      "properties": {
+        "name": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Candidate full name",
+          "title": "Name"
+        },
+        "email": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Candidate email or null if unlisted",
+          "title": "Email"
+        },
+        "education": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Raw education summary string (e.g. degree, field, graduation year, grade)",
+          "title": "Education"
+        },
+        "skills": {
+          "description": "List of extracted candidate skills",
+          "items": {
+            "$ref": "#/$defs/Skill"
+          },
+          "title": "Skills",
+          "type": "array"
+        },
+        "hackathons": {
+          "description": "Hackathons and competitions",
+          "items": {
+            "$ref": "#/$defs/HackathonItem"
+          },
+          "title": "Hackathons",
+          "type": "array"
+        },
+        "internships": {
+          "description": "Internships and industry experience",
+          "items": {
+            "$ref": "#/$defs/InternshipItem"
+          },
+          "title": "Internships",
+          "type": "array"
+        },
+        "certifications": {
+          "description": "Formal certifications listed in resume",
+          "items": {
+            "type": "string"
+          },
+          "title": "Certifications",
+          "type": "array"
+        },
+        "preferred_roles": {
+          "description": "Target/preferred job roles",
+          "items": {
+            "type": "string"
+          },
+          "title": "Preferred Roles",
+          "type": "array"
+        },
+        "cv_file": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Source resume filename",
+          "title": "Cv File"
+        }
+      },
+      "title": "ProfilePrefill",
+      "type": "object"
+    },
+    "ProjectDetail": {
+      "additionalProperties": false,
+      "description": "Structured breakdown of project entry.",
+      "properties": {
+        "title": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Title"
+        },
+        "description": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Description"
+        },
+        "technologies": {
+          "items": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "title": "Technologies",
+          "type": "array"
+        }
+      },
+      "title": "ProjectDetail",
+      "type": "object"
+    },
+    "Skill": {
+      "additionalProperties": false,
+      "description": "Building block skill entry.",
+      "properties": {
+        "skill_name": {
+          "description": "Canonical or extracted skill name",
+          "title": "Skill Name",
+          "type": "string"
+        },
+        "category_code": {
+          "description": "1 of the 12 RADIX categories or OTHER",
+          "enum": [
+            "COD",
+            "DSA",
+            "OOD",
+            "APTI",
+            "COMM",
+            "AI",
+            "CLOUD",
+            "SQL",
+            "SWE",
+            "SYSD",
+            "NETW",
+            "OS",
+            "OTHER"
+          ],
+          "title": "Category Code",
+          "type": "string"
+        },
+        "evidence": {
+          "description": "Short quote or exact sentence from the source text",
+          "title": "Evidence",
+          "type": "string"
+        },
+        "confidence": {
+          "description": "high, medium, or low",
+          "enum": [
+            "high",
+            "medium",
+            "low"
+          ],
+          "title": "Confidence",
+          "type": "string"
+        },
+        "evidence_verified": {
+          "default": true,
+          "description": "Whether the evidence quote was verified in source text",
+          "title": "Evidence Verified",
+          "type": "boolean"
+        },
+        "source_section": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Section where skill was discovered (e.g. technical_skills, projects)",
+          "title": "Source Section"
+        },
+        "source_kind": {
+          "default": "unknown",
+          "description": "Semantic origin type for downstream weighting (skills_list, project, internship, etc.)",
+          "enum": [
+            "skills_list",
+            "project",
+            "internship",
+            "certification",
+            "achievement",
+            "experience",
+            "coursework",
+            "unknown"
+          ],
+          "title": "Source Kind",
+          "type": "string"
+        }
+      },
+      "required": [
+        "skill_name",
+        "category_code",
+        "evidence",
+        "confidence"
+      ],
+      "title": "Skill",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "description": "Top-level contract output for Role 2 (Resume Parsing).",
+  "properties": {
+    "schema_version": {
+      "default": "1.3",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "source_type": {
+      "const": "resume",
+      "default": "resume",
+      "title": "Source Type",
+      "type": "string"
+    },
+    "source_file": {
+      "title": "Source File",
+      "type": "string"
+    },
+    "company": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Company"
+    },
+    "role": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Role"
+    },
+    "skills": {
+      "items": {
+        "$ref": "#/$defs/Skill"
+      },
+      "title": "Skills",
+      "type": "array"
+    },
+    "profile_prefill": {
+      "$ref": "#/$defs/ProfilePrefill"
+    },
+    "details": {
+      "$ref": "#/$defs/Details"
+    },
+    "category_summary": {
+      "anyOf": [
+        {
+          "additionalProperties": {
+            "$ref": "#/$defs/CategorySummaryItem"
+          },
+          "type": "object"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Category Summary"
+    },
+    "meta": {
+      "$ref": "#/$defs/ParserMeta"
+    }
+  },
+  "required": [
+    "source_file",
+    "profile_prefill"
+  ],
+  "title": "ResumeParseResult",
+  "type": "object"
+}

@@ -1,0 +1,32 @@
+{
+  "needs_human_review": true,
+  "candidate_name": "Rohan Verma",
+  "education_summary": "B.Tech, Computer Science and Engineering, Class of 2026 — CGPA 9.1 / 10",
+  "core_skills": [
+    {"canonical": "C++", "category_code": "COD"},
+    {"canonical": "Python", "category_code": "COD"},
+    {"canonical": "SQL", "category_code": "SQL"},
+    {"canonical": "Data Structures & Algorithms", "category_code": "DSA"},
+    {"canonical": "System Design", "category_code": "SYSD"},
+    {"canonical": "Object-Oriented Design", "category_code": "OOD"},
+    {"canonical": "Operating Systems", "category_code": "OS"},
+    {"canonical": "Machine Learning", "category_code": "AI"},
+    {"canonical": "Git", "category_code": "SWE"},
+    {"canonical": "Docker", "category_code": "SWE"}
+  ],
+  "implied_skills": [
+    {"canonical": "Pub-Sub Architecture", "category_code": "SYSD"},
+    {"canonical": "Recommendation Systems", "category_code": "AI"},
+    {"canonical": "Design Patterns", "category_code": "OOD"},
+    {"canonical": "Testing", "category_code": "SWE"},
+    {"canonical": "CI/CD", "category_code": "SWE"},
+    {"canonical": "Open-Source Contribution", "category_code": "SWE"},
+    {"canonical": "Competitive Programming", "category_code": "DSA"},
+    {"canonical": "Technical Writing", "category_code": "COMM"}
+  ],
+  "absent_categories": ["CLOUD", "NETW", "APTI"],
+  "hackathon_count": 1,
+  "internship_count": 1,
+  "certifications": [],
+  "preferred_roles": ["Software Engineer", "Data Scientist", "Backend Engineer"]
+}

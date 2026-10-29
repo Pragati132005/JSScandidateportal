@@ -1,0 +1,19 @@
+Rohan Verma
+Strong all-rounder — competitive fit across nearly every role in this pack
+Education
+B.Tech, Computer Science and Engineering, Class of 2026 — CGPA 9.1 / 10
+Technical Skills
+C++, Python, SQL, Data Structures & Algorithms, System Design, Object-Oriented Design, Operating Systems, basic Machine Learning, Git, Docker
+Projects
+Designed and built a scalable notification service (pub-sub architecture, horizontally-scalable workers) as a personal system-design project, documented with architecture diagrams
+Built a recommendation engine using collaborative filtering on a movie-ratings dataset, evaluated with precision/recall
+Wrote a technical blog series on object-oriented design patterns used in real-world systems
+Hackathons / Internships
+Winner, national inter-college hackathon — built a real-time collaborative document editor
+Software Engineering intern at a Series-B startup — shipped a feature end-to-end including tests and CI
+Certifications
+Self-taught via applied projects; no formal certifications listed
+Achievements
+500+ problems solved across competitive programming platforms; open-source contributor (2 merged PRs to a mid-size Python library)
+Preferred Roles
+Software Engineer, Data Scientist, Backend Engineer
